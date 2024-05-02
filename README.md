@@ -4,7 +4,8 @@ Este repositório consta o software proveniente do projeto de uma clinica de odo
 Participantes:
 
 João Pedro Marques Martins - RGM: 802.366
-Eduardo Panage Avila - 802.456
+
+Eduardo Panage Avila - RGM: 802.456
 
 
 
