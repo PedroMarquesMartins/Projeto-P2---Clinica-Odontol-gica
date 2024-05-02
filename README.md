@@ -18,3 +18,6 @@ https://github.com/PedroMarquesMartins/Projeto-P2---Clinica-Odontol-gica
 Link do Trello para acesso:
 
 https://trello.com/invite/b/caUJT6sJ/ATTIf48ec183800158f4dc55321c9afed269AF4E04F7/projeto-programacao-desktop
+
+
+Projeto escolhido: Clinica Odontológica
