@@ -7,12 +7,18 @@ import javax.persistence.Id;
 
 @Entity
 public class Material {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @Collum(length = 30)
     private String nome;
+
+    @Collum
     private int quantidade;
+
+    @Collum
     private int minimo;
 
     public Long getId() {

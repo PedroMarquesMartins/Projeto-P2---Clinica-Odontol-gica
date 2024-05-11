@@ -5,6 +5,7 @@ import java.util.Date;
 
 @Entity
 public class Agendamento {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;

@@ -5,17 +5,24 @@ import java.util.Date;
 
 @Entity
 public class Paciente {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @Collum(length = 30)
     private String nome;
+
+    @Collum(length = 30)
     private String cpf;
 
     @Temporal(TemporalType.DATE)
     private Date nascimento;
 
+    @Collum(length = 50)
     private String endereco;
+
+    @Collum(length = 30)
     private String convenio;
 
     @OneToOne(cascade = CascadeType.ALL)

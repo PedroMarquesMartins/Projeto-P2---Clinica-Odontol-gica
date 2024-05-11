@@ -4,10 +4,12 @@ import javax.persistence.*;
 
 @Entity
 public class Recepcionista {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @Collum(length = 30)
     private String nome;
 
     @OneToOne(cascade = CascadeType.ALL)
