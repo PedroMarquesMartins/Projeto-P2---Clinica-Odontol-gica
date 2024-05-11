@@ -4,7 +4,7 @@ import javax.persistence.*;
 import java.util.Date;
 
 @Entity
-public class Paciente {
+public class Paciente implements Serializable{
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

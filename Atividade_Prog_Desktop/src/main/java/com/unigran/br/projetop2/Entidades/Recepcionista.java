@@ -3,7 +3,7 @@ package com.unigran.br.projetop2.Entidades;
 import javax.persistence.*;
 
 @Entity
-public class Recepcionista {
+public class Recepcionista implements Serializable{
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
