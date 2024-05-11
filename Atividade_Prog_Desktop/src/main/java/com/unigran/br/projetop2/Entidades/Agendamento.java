@@ -1,11 +1,30 @@
 package com.unigran.br.projetop2.Entidades;
 
+import javax.persistence.*;
 import java.util.Date;
 
+@Entity
 public class Agendamento {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    @ManyToOne
     private Paciente paciente;
+
+    @ManyToOne
     private Dentista dentista;
+
+    @Temporal(TemporalType.TIMESTAMP)
     private Date data;
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
 
     public Paciente getPaciente() {
         return paciente;
