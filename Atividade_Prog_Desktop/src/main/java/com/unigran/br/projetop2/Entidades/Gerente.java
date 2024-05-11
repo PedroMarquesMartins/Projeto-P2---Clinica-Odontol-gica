@@ -1,8 +1,28 @@
 package com.unigran.br.projetop2.Entidades;
 
-public class Gerente {
+import javax.persistence.*;
+import java.io.Serializable;
+
+@Entity
+public class Gerente implements Serializable {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer id;
+
+    @Column(length = 30)
     private String nome;
+
+    @Column(length = 30)
     private Login login;
+
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
 
     public String getNome() {
         return nome;

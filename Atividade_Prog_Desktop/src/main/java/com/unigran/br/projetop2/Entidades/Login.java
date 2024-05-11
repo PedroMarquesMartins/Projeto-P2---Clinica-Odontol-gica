@@ -1,8 +1,27 @@
 package com.unigran.br.projetop2.Entidades;
 
-public class Login {
+import javax.persistence.*;
+import java.io.Serializable;
+
+@Entity
+public class Login implements Serializable {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer id;
+
+    @Column(length = 30)
     private String user;
+
+    @Column(length = 30)
     private String senha;
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
 
     public String getUser() {
         return user;

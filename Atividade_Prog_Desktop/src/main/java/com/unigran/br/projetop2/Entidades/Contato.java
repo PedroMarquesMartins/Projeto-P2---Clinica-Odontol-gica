@@ -1,11 +1,32 @@
 package com.unigran.br.projetop2.Entidades;
 
-package com.unigran.br.projetop2.Entidades;
+import java.io.Serializable;
+import javax.persistence.*;
+import java.io.File;
+import java.io.Serializable;
 
-public class Contato {
+@Entity
+public class Contato implements Serializable {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer id;
+
+    @Column(length = 30)
     private String email;
+
+    @Column(length = 30)
     private String contato1;
+
+    @Column(length = 30)
     private String contato2;
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
 
     public void removerEmail()
     {
