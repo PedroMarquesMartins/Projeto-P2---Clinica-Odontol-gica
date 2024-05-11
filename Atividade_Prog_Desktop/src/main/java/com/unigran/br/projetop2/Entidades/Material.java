@@ -6,7 +6,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
-public class Material {
+public class Material implements Serializable{
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
