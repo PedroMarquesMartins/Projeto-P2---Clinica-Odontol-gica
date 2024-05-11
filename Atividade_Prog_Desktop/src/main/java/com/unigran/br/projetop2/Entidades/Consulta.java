@@ -1,12 +1,44 @@
 package com.unigran.br.projetop2.Entidades;
 
+import javax.persistence.*;
 import java.io.File;
+import java.io.Serializable;
 
-public class Consulta {
+@Entity
+public class Consulta implements Serializable {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer id;
+
+    @ManyToOne
     private Paciente paciente;
+
+    @ManyToOne
     private Dentista dentista;
+
+    @Column(length = 30)
     private String observacoes;
-    private File anexos;
+
+
+    private File anexos;  //Observar
+
+    @Column
+    private Float valor;
+
+    public void setValor(Float valor) {
+        this.valor = valor;
+    }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    @Column
     private double valor;
 
     public Paciente getPaciente() {
