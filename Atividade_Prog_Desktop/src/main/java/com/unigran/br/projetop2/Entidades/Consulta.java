@@ -23,9 +23,6 @@ public class Consulta implements Serializable {
 
     private File anexos;  //Observar
 
-    @Column
-    private Float valor;
-
     public void setValor(Float valor) {
         this.valor = valor;
     }

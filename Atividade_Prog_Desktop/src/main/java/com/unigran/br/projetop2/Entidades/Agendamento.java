@@ -1,10 +1,11 @@
 package com.unigran.br.projetop2.Entidades;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.util.Date;
 
 @Entity
-public class Agendamento implements Serializable{
+public class Agendamento implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

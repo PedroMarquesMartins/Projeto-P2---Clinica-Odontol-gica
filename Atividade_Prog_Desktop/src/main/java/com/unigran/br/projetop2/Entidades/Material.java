@@ -1,24 +1,22 @@
 package com.unigran.br.projetop2.Entidades;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.io.Serializable;
 
 @Entity
-public class Material implements Serializable{
+public class Material implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Collum(length = 30)
+    @Column(length = 30)
     private String nome;
 
-    @Collum
+    @Column
     private int quantidade;
 
-    @Collum
+    @Column
     private int minimo;
 
     public Long getId() {
