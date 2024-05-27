@@ -1,28 +1,30 @@
 package com.unigran.br.projetop2.Entidades;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.util.Date;
 
+
 @Entity
-public class Paciente implements Serializable{
+public class Paciente implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Collum(length = 30)
+    @Column(length = 30)
     private String nome;
 
-    @Collum(length = 30)
+    @Column(length = 30)
     private String cpf;
 
     @Temporal(TemporalType.DATE)
     private Date nascimento;
 
-    @Collum(length = 50)
+    @Column(length = 50)
     private String endereco;
 
-    @Collum(length = 30)
+    @Column(length = 30)
     private String convenio;
 
     @OneToOne(cascade = CascadeType.ALL)

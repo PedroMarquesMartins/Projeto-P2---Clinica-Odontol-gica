@@ -1,15 +1,16 @@
 package com.unigran.br.projetop2.Entidades;
 
 import javax.persistence.*;
+import java.io.Serializable;
 
 @Entity
-public class Recepcionista implements Serializable{
+public class Recepcionista implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Collum(length = 30)
+    @Column(length = 30)
     private String nome;
 
     @OneToOne(cascade = CascadeType.ALL)

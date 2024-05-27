@@ -1,8 +1,9 @@
-package br.unigran.Persistencia;
+package com.unigran.br.projetop2.Persistencia.Padrao;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
+import java.util.List;
 
 public class Dao {
     private static Dao instancia;
@@ -16,11 +17,7 @@ public class Dao {
 
     public static Dao getInstace() {
         if (instancia == null) {
-            synchronized (Dao.class) {
-                if (instancia == null) {
-                    instancia = new Dao();
-                }
-            }
+            instancia = new Dao();
         }
         return instancia;
     }
@@ -43,7 +40,7 @@ public class Dao {
         return retorno;
     }
 
-    public void remover(Object o) {
+    public void remover(Object o, Class clazz) {
         em.getTransaction().begin();
         em.remove(em.contains(o) ? o : em.merge(o));
         em.getTransaction().commit();
@@ -53,7 +50,7 @@ public class Dao {
         return em.find(clazz, id);
     }
 
-    public <T> List<T> listarTodos(Class<T> clazz) {
+    public <T> List<T> listarTodos(Class<T> clazz, String s) {
         return em.createQuery("SELECT o FROM " + clazz.getSimpleName() + " o", clazz).getResultList();
     }
 
