@@ -1,6 +1,7 @@
 package com.unigran.br.projetop2.Controllers;
 
-import com.unigran.br.projetop2.Entidades.Paciente;
+import com.unigran.br.projetop2.Model.Paciente;
+import com.unigran.br.projetop2.persistencia.Dao.Dados;
 
 import java.util.List;
 
@@ -8,7 +9,7 @@ public class PacienteController implements Controller{
 
     @Override
     public String[] getTitulosColunas() {
-        return new String[0];
+        return new String[]{"id", "Nome"};
     }
 
     @Override
@@ -18,21 +19,27 @@ public class PacienteController implements Controller{
 
     @Override
     public List getListaDados() {
-        return em.createNativeQuery("select * from PACIENTE p", Paciente.class)
+        return em.createNativeQuery("SELECT * FROM paciente p",Paciente.class)
                 .getResultList();
     }
 
     @Override
     public void remover(Object o) {
-        etx.begin();
-        em.remove(o);
-        etx.commit();
+        Dados dados = new Dados();
+        dados.remove(o);
+
+        //Ou seria    dados.remove(paciente);    ???? Veremos
     }
 
     @Override
     public void salvar(Object o) throws Exception {
-        etx.begin();
-        em.persist(o);
-        etx.commit();
+        Dados dados = new Dados();
+        dados.salvar(o);
+    }
+
+    public List<Paciente> listaDadosPorNome(String nomeInformado) {
+        return em.createQuery("SELECT p FROM paciente p WHERE p.nome = :nome", Paciente.class)
+                .setParameter("nome", nomeInformado)
+                .getResultList();
     }
 }

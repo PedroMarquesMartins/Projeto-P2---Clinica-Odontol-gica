@@ -1,4 +1,4 @@
-package com.unigran.br.projetop2.Entidades;
+package com.unigran.br.projetop2.Model;
 
 import java.io.Serializable;
 import javax.persistence.*;
