@@ -1,42 +1,27 @@
-package com.unigran.br.projetop2.Entidades;
+package com.unigran.br.projetop2.Model;
 
 import javax.persistence.*;
 import java.io.Serializable;
 
 @Entity
-public class Dentista implements Serializable {
+public class Recepcionista implements Serializable {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
-
-    @Column
-    private Integer cro;  //Observar
+    private Long id;
 
     @Column(length = 30)
     private String nome;
 
-    @OneToOne(cascade = CascadeType.ALL)  //Possivel problema futuro?
+    @OneToOne(cascade = CascadeType.ALL)
     private Login login;
 
-
-    public Integer getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(Long id) {
         this.id = id;
-    }
-
-    public void setCro(Integer cro) {
-        this.cro = cro;
-    }
-
-    public int getCro() {
-        return cro;
-    }
-
-    public void setCro(int cro) {
-        this.cro = cro;
     }
 
     public String getNome() {

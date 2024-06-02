@@ -1,10 +1,10 @@
-package com.unigran.br.projetop2.Entidades;
+package com.unigran.br.projetop2.Model;
 
 import javax.persistence.*;
 import java.io.Serializable;
 
 @Entity
-public class Recepcionista implements Serializable {
+public class Material implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -13,8 +13,11 @@ public class Recepcionista implements Serializable {
     @Column(length = 30)
     private String nome;
 
-    @OneToOne(cascade = CascadeType.ALL)
-    private Login login;
+    @Column
+    private int quantidade;
+
+    @Column
+    private int minimo;
 
     public Long getId() {
         return id;
@@ -32,11 +35,19 @@ public class Recepcionista implements Serializable {
         this.nome = nome;
     }
 
-    public Login getLogin() {
-        return login;
+    public int getQuantidade() {
+        return quantidade;
     }
 
-    public void setLogin(Login login) {
-        this.login = login;
+    public void setQuantidade(int quantidade) {
+        this.quantidade = quantidade;
+    }
+
+    public int getMinimo() {
+        return minimo;
+    }
+
+    public void setMinimo(int minimo) {
+        this.minimo = minimo;
     }
 }
