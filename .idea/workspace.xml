@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="d57cb34f-587f-4fb4-a0cb-bd35152aeae8" name="Changes" comment="Controllers simples - Primeira Branch&#10;&#10;Iniciando o desenvolvimento da lógica complexa e implementação das entidadades.&#10;&#10;Adição de novas entidades necessárias, mudanças no comportamento de classes e adições de DAO, relacionamento com o banco alterado, entre outras.">
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Atividade_Prog_Desktop/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Atividade_Prog_Desktop/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Atividade_Prog_Desktop/src/main/java/Main/main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Atividade_Prog_Desktop/src/main/java/Main/main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Atividade_Prog_Desktop/src/main/java/com/unigran/br/projetop2/Controllers/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/Atividade_Prog_Desktop/src/main/java/com/unigran/br/projetop2/controllers/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Atividade_Prog_Desktop/src/main/java/com/unigran/br/projetop2/Controllers/PacienteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Atividade_Prog_Desktop/src/main/java/com/unigran/br/projetop2/controllers/PacienteController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Atividade_Prog_Desktop/src/main/java/com/unigran/br/projetop2/Model/Admin.java" beforeDir="false" afterPath="$PROJECT_DIR$/Atividade_Prog_Desktop/src/main/java/com/unigran/br/projetop2/model/Admin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Atividade_Prog_Desktop/src/main/java/com/unigran/br/projetop2/Model/Agendamento.java" beforeDir="false" afterPath="$PROJECT_DIR$/Atividade_Prog_Desktop/src/main/java/com/unigran/br/projetop2/model/Agendamento.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Atividade_Prog_Desktop/src/main/java/com/unigran/br/projetop2/Model/Consulta.java" beforeDir="false" afterPath="$PROJECT_DIR$/Atividade_Prog_Desktop/src/main/java/com/unigran/br/projetop2/model/Consulta.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Atividade_Prog_Desktop/src/main/java/com/unigran/br/projetop2/Model/Contato.java" beforeDir="false" afterPath="$PROJECT_DIR$/Atividade_Prog_Desktop/src/main/java/com/unigran/br/projetop2/model/Contato.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Atividade_Prog_Desktop/src/main/java/com/unigran/br/projetop2/Model/Dentista.java" beforeDir="false" afterPath="$PROJECT_DIR$/Atividade_Prog_Desktop/src/main/java/com/unigran/br/projetop2/model/Dentista.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Atividade_Prog_Desktop/src/main/java/com/unigran/br/projetop2/Model/Gerente.java" beforeDir="false" afterPath="$PROJECT_DIR$/Atividade_Prog_Desktop/src/main/java/com/unigran/br/projetop2/model/Gerente.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Atividade_Prog_Desktop/src/main/java/com/unigran/br/projetop2/Model/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/Atividade_Prog_Desktop/src/main/java/com/unigran/br/projetop2/model/Login.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Atividade_Prog_Desktop/src/main/java/com/unigran/br/projetop2/Model/Material.java" beforeDir="false" afterPath="$PROJECT_DIR$/Atividade_Prog_Desktop/src/main/java/com/unigran/br/projetop2/model/Material.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Atividade_Prog_Desktop/src/main/java/com/unigran/br/projetop2/Model/Paciente.java" beforeDir="false" afterPath="$PROJECT_DIR$/Atividade_Prog_Desktop/src/main/java/com/unigran/br/projetop2/model/Paciente.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Atividade_Prog_Desktop/src/main/java/com/unigran/br/projetop2/Model/Prontuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/Atividade_Prog_Desktop/src/main/java/com/unigran/br/projetop2/model/Prontuario.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Atividade_Prog_Desktop/src/main/java/com/unigran/br/projetop2/Model/Prontuarios.java" beforeDir="false" afterPath="$PROJECT_DIR$/Atividade_Prog_Desktop/src/main/java/com/unigran/br/projetop2/model/Prontuarios.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Atividade_Prog_Desktop/src/main/java/com/unigran/br/projetop2/Model/Recepcionista.java" beforeDir="false" afterPath="$PROJECT_DIR$/Atividade_Prog_Desktop/src/main/java/com/unigran/br/projetop2/model/Recepcionista.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Atividade_Prog_Desktop/src/main/java/com/unigran/br/projetop2/persistencia/Dao/Dados.java" beforeDir="false" afterPath="$PROJECT_DIR$/Atividade_Prog_Desktop/src/main/java/com/unigran/br/projetop2/persistencia/Dao/Dados.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Atividade_Prog_Desktop/src/main/java/com/unigran/br/projetop2/persistencia/implementacao/PacienteImplementacao.java" beforeDir="false" afterPath="$PROJECT_DIR$/Atividade_Prog_Desktop/src/main/java/com/unigran/br/projetop2/persistencia/implementacao/PacienteImplementacao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Atividade_Prog_Desktop/target/classes/Main/main.class" beforeDir="false" afterPath="$PROJECT_DIR$/Atividade_Prog_Desktop/target/classes/Main/main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Atividade_Prog_Desktop/target/classes/br/unigran/Persistencia/Dao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Atividade_Prog_Desktop/target/classes/com/unigran/br/projetop2/Controllers/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/Atividade_Prog_Desktop/target/classes/com/unigran/br/projetop2/Controllers/Controller.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Atividade_Prog_Desktop/target/classes/com/unigran/br/projetop2/Controllers/PacienteController.class" beforeDir="false" afterPath="$PROJECT_DIR$/Atividade_Prog_Desktop/target/classes/com/unigran/br/projetop2/Controllers/PacienteController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Atividade_Prog_Desktop/target/classes/com/unigran/br/projetop2/Entidades/Admin.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Atividade_Prog_Desktop/target/classes/com/unigran/br/projetop2/Entidades/Agendamento.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Atividade_Prog_Desktop/target/classes/com/unigran/br/projetop2/Entidades/Consulta.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Atividade_Prog_Desktop/target/classes/com/unigran/br/projetop2/Entidades/Contato.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Atividade_Prog_Desktop/target/classes/com/unigran/br/projetop2/Entidades/Dentista.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Atividade_Prog_Desktop/target/classes/com/unigran/br/projetop2/Entidades/Gerente.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Atividade_Prog_Desktop/target/classes/com/unigran/br/projetop2/Entidades/Login.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Atividade_Prog_Desktop/target/classes/com/unigran/br/projetop2/Entidades/Material.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Atividade_Prog_Desktop/target/classes/com/unigran/br/projetop2/Entidades/Paciente.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Atividade_Prog_Desktop/target/classes/com/unigran/br/projetop2/Entidades/Recepcionista.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Atividade_Prog_Desktop/target/classes/com/unigran/br/projetop2/Persistencia/InterfaceDao.class" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="Pedro &lt;joao@joao.com&gt;" />
+      </list>
+    </option>
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;PedroMarquesMartins&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="f6a271c4-fc34-4377-a3b6-ab5a5ba86012" />
+        <option name="url" value="https://github.com/PedroMarquesMartins/Projeto-P2---Clinica-Odontol-gica" />
+      </UrlAndAccount>
+    </option>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
+  <component name="ProjectId" id="2h41v1EwaG8MlPg8Cn9ZDmDOkf0" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;Adicionando-+-Persistencias-Branch-JoaoPedro&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Pedro/Desktop/Central&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.project.grazie&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Pedro\Desktop\Projeto-P2---Clinica-Odontol-gica\Atividade_Prog_Desktop\src\main\java\com\unigran\br\projetop2" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.main">
+    <configuration name="MainRun" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="Main.main" />
+      <module name="Projeto-P2---Clinica-Odontol-gica" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main.main" />
+      <module name="Atividade_Prog_Desktop" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Main.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.MainRun" />
+      <item itemvalue="Application.main" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.main" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d57cb34f-587f-4fb4-a0cb-bd35152aeae8" name="Changes" comment="" />
+      <created>1716838762913</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1716838762913</updated>
+    </task>
+    <task id="LOCAL-00001" summary="Inclusão de uma interface de persitencia padrão.&#10;&#10;Inciando os Controllers e adicionando pacotes de persistencia de implementação.&#10;&#10;Novas melhorias, adições e correções.&#10;&#10;(Branch a completar)&#10;Branch Feita por João Pedro Marques ---">
+      <option name="closed" value="true" />
+      <created>1716844266230</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1716844266230</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Controllers simples - Primeira Branch&#10;&#10;Iniciando o desenvolvimento da lógica complexa e implementação das entidadades.&#10;&#10;Adição de novas entidades necessárias, mudanças no comportamento de classes e adições de DAO, relacionamento com o banco alterado, entre outras.">
+      <option name="closed" value="true" />
+      <created>1717289211118</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1717289211118</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="CommitDeTeste" />
+    <MESSAGE value="Criação da Classe Dao (Persistencia) e modificação/adequação do Pom.xml" />
+    <MESSAGE value="Inclusão de uma interface de persitencia padrão.&#10;&#10;Inciando os Controllers e adicionando pacotes de persistencia de implementação.&#10;&#10;Novas melhorias, adições e correções.&#10;&#10;(Branch a completar)&#10;Branch Feita por João Pedro Marques ---" />
+    <MESSAGE value="Controllers simples - Primeira Branch&#10;&#10;Iniciando o desenvolvimento da lógica complexa e implementação das entidadades.&#10;&#10;Adição de novas entidades necessárias, mudanças no comportamento de classes e adições de DAO, relacionamento com o banco alterado, entre outras." />
+    <option name="LAST_COMMIT_MESSAGE" value="Controllers simples - Primeira Branch&#10;&#10;Iniciando o desenvolvimento da lógica complexa e implementação das entidadades.&#10;&#10;Adição de novas entidades necessárias, mudanças no comportamento de classes e adições de DAO, relacionamento com o banco alterado, entre outras." />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>

@@ -9,7 +9,7 @@ import java.util.List;
 public class Dados {
     EntityManagerFactory emf=
             Persistence.
-                    createEntityManagerFactory("org.example_untitled_jar_1.0-SNAPSHOTPU");
+                    createEntityManagerFactory("br.unigran_Atividade_Prog_Desktop_jar_1.0-SNAPSHOTPU");
     EntityManager em =emf.createEntityManager();
     EntityTransaction etx = em.getTransaction();
 
@@ -24,17 +24,18 @@ public class Dados {
         etx.commit();
     }
 
-    public void remove(Object o){
+    public void remove(Object o) {
         etx.begin();
-        em.remove(o);
+        Class<?> clazz = o.getClass();
+        Object id = em.getEntityManagerFactory().getPersistenceUnitUtil().getIdentifier(o);
+        Object managedEntity = em.find(clazz, id);
+        if (managedEntity != null) {
+            em.remove(managedEntity);
+        }
         etx.commit();
     }
 
-
-
-
-
-    //----SLA-----------------------------------------------------------------
+    //----Sla o que palito fez aqui honestamente-----------------------------------------------------------------
     public <T> T buscarPorId(Class<T> clazz, Object id) {
         return em.find(clazz, id);
     }
