@@ -1,10 +1,12 @@
 package com.unigran.br.projetop2.controllers;
 
-import com.unigran.br.projetop2.model.Material;
+import com.unigran.br.projetop2.model.Agendamento;
 import com.unigran.br.projetop2.persistencia.Dao.Dados;
 
 import java.util.List;
-public class MaterialController implements Controller{
+
+public class AgendamentoController implements Controller {
+
     @Override
     public String[] getTitulosColunas() {
         return new String[0];
@@ -17,7 +19,7 @@ public class MaterialController implements Controller{
 
     @Override
     public List getListaDados() {
-        return em.createNativeQuery("SELECT * FROM material m", Material.class)
+        return em.createNativeQuery("SELECT * FROM agendamento a", Agendamento.class)
                 .getResultList();
     }
 
@@ -33,17 +35,11 @@ public class MaterialController implements Controller{
         dados.salvar(o);
     }
 
-    public List<Material> listaMaterialPorNome(String nomeMaterial) {
-        return em.createQuery("SELECT m FROM Material m WHERE m.nome = :nome", Material.class)
-                .setParameter("nome", nomeMaterial)
-                .getResultList();
-    }
-
-    public void salvarMaterialQnt(String nomeMaterial, Integer qnt){
+    public void salvarStatus(Integer id,Integer status){
         em.getTransaction().begin();
-        em.createQuery("UPDATE Material m SET m.quantidade = :quantidade WHERE m.nome = :nome")
-                .setParameter("quantidade", qnt)
-                .setParameter("nome", nomeMaterial)
+        em.createQuery("UPDATE Agendamento a SET a.status = :status WHERE a.id = :id")
+                .setParameter("status", status)
+                .setParameter("id", id)
                 .executeUpdate();
         em.getTransaction().commit();
     }

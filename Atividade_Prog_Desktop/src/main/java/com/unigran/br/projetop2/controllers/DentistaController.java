@@ -1,12 +1,10 @@
 package com.unigran.br.projetop2.controllers;
 
-import com.unigran.br.projetop2.model.Login;
-import com.unigran.br.projetop2.model.Paciente;
 import com.unigran.br.projetop2.persistencia.Dao.Dados;
 
 import java.util.List;
 
-public class LoginController implements Controller{
+public class DentistaController implements Controller{
     @Override
     public String[] getTitulosColunas() {
         return new String[0];
@@ -19,13 +17,11 @@ public class LoginController implements Controller{
 
     @Override
     public List getListaDados() {
-        return em.createNativeQuery("SELECT * FROM login l", Login.class)
-                .getResultList();
+        return null;
     }
 
     @Override
     public void remover(Object o) {
-        //Não há como remover um login.
     }
 
     @Override
