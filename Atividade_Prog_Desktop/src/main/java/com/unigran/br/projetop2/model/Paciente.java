@@ -14,6 +14,7 @@ import javax.persistence.GenerationType;
 @Entity
 public class Paciente implements Serializable {
 
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;

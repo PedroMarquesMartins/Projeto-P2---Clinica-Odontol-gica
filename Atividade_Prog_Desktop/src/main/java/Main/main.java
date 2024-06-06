@@ -1,9 +1,6 @@
 package Main;
 
-import com.unigran.br.projetop2.model.Material;
-import com.unigran.br.projetop2.persistencia.implementacao.LoginCadastroImplementacao;
-import com.unigran.br.projetop2.persistencia.implementacao.MaterialImplementacao;
-import com.unigran.br.projetop2.persistencia.implementacao.PacienteImplementacao;
+import com.unigran.br.projetop2.persistencia.implementacao.*;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -11,6 +8,26 @@ import java.util.Date;
 
 public class main {
     public static void main(String[] args) throws Exception {
+
+        //Teste de Agendamento a seguir:
+        SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
+        try {
+            Date data = dateFormat.parse("12/12/2012");  //Validar data
+
+            String observacoes = "Limpeza";
+            Double valor = 390.39;
+            Integer h=19;
+            Integer m=12;
+
+            //AgendamentoImplementacao.marcarConsulta(data,observacoes,valor,null,h,m);
+            //AgendamentoImplementacao.cancelarConsulta(13);
+            //AgendamentoImplementacao.concluirConsulta(12);
+        }catch (ParseException e)
+        {
+            //faz o L
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
 
         //Teste de Material a seguir:
         /*boolean sucesso = MaterialImplementacao.efetuarCadastroMaterial("Alcool",10,1); //OK
@@ -28,26 +45,27 @@ public class main {
          */
 
         //Teste de Paciente a Seguir: TA OK!
-        /*
+/*
 
         //PacienteImplementacao.listarPacientes();  //Testar na Tela!
-        //PacienteImplementacao.removerPacienteInformado("Joao"); ok
+        //PacienteImplementacao.removerPacienteInformado("Lucas");
+
 
 
         SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
-        String nome = "Ana";
-        String cpf = "21335603";  //Validar tamanho
+        String nome = "Lucas";
+        String cpf = "999995603";  //Validar tamanho
         try {
-            Date dataNasc = dateFormat.parse("10/09/2012");  //Validar data
+            Date dataNasc = dateFormat.parse("10/10/2024");  //Validar data
 
-            String endereco = "Bairro Monte Olimpo N890 Dourados";
-            String convenios = "cONVENJI";
-            String email = "EMAILaLTERADO.@FODASE";
-            String responsavel = "Ana Responsavel";
+            String endereco = "Rio GRande do SUl";
+            String convenios = "Unimed";
+            String email = "Lucreia@FODASE";
+            String responsavel = "Mae";
 
-            //PacienteImplementacao.inserirPaciente(nome,cpf,dataNasc,endereco,convenios,email,responsavel); OK
+
             //PacienteImplementacao.alterarPacienteInformado(nome,cpf,dataNasc,endereco,convenios,email,responsavel); OK
-            // PacienteImplementacao.inserirPaciente(nome,cpf,dataNasc,endereco,convenios,email,responsavel); okk
+            //PacienteImplementacao.inserirPaciente(nome,cpf,dataNasc,endereco,convenios,email,responsavel);
         }catch (ParseException e)
         {
             //faz o L
@@ -55,4 +73,5 @@ public class main {
             throw new RuntimeException(e);
         }*/
     }
+
 }

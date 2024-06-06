@@ -12,12 +12,11 @@ public class Dentista implements Serializable {
     @Column
     private Integer cro;  //Observar
 
-    @Column(length = 30)
+   @Column(length = 30)
     private String nome;
 
     //@OneToOne(cascade = CascadeType.ALL)  //Possivel problema futuro?
     //private Login login;
-
 
     public Integer getId() {
         return id;

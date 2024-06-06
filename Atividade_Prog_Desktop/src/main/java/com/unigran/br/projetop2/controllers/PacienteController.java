@@ -40,6 +40,7 @@ public class PacienteController implements Controller{
                 .setParameter("nome", nomeInformado)
                 .getResultList();
     }
+
     public List<Paciente> listaDadosPorCpf(String cpfInformado) {
         return em.createQuery("SELECT p FROM Paciente p WHERE p.cpf = :cpf", Paciente.class)
                 .setParameter("cpf", cpfInformado)

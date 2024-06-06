@@ -19,9 +19,10 @@ public class Prontuarios implements Serializable {
     @ManyToOne
     private Prontuario prontuario;
 
-    @ManyToOne
-    private Consulta consulta;
-    @Lob
-    private String descricao;
+    //@ManyToOne
+    //private Consulta consulta;
+
+    //@Lob
+    //private String descricao;
 
 }
