@@ -1,7 +1,9 @@
 package com.unigran.br.projetop2.model;
 
 import javax.persistence.*;
+import java.io.File;
 import java.io.Serializable;
+import java.time.LocalTime;
 import java.util.Date;
 
 @Entity
@@ -9,39 +11,73 @@ public class Agendamento implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Integer id;
 
-    @ManyToOne
-    private Paciente paciente;
+   //// @ManyToOne
+   // @JoinColumn(name = "paciente_id")
+   // private Paciente paciente;
 
-    @ManyToOne
-    private Dentista dentista;
+   // @ManyToOne
+   // @JoinColumn(name = "dentista_cro")
+   // private Dentista dentista;
 
     @Temporal(TemporalType.TIMESTAMP)
     private Date data;
 
-    public Long getId() {
+    @Column(length = 500)
+    private String observacao;
+
+    @Column
+    private  Integer status;
+
+    @Column
+    private double valor;
+
+    @Column(name = "horario")
+    private LocalTime horario;
+
+    //private File anexos;  //Observar
+
+
+    public Integer getStatus() {
+        return status;
+    }
+
+
+    public LocalTime getHorario() {
+        return horario;
+    }
+
+    public void setHorario(LocalTime horario) {
+        this.horario = horario;
+    }
+
+    public void setStatus(Integer status) {
+        this.status = status;
+    }
+
+    public double getValor() {
+        return valor;
+    }
+
+    public void setValor(double valor) {
+        this.valor = valor;
+    }
+
+    public String getObservacao() {
+        return observacao;
+    }
+
+    public void setObservacao(String observacao) {
+        this.observacao = observacao;
+    }
+
+    public Integer getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(Integer id) {
         this.id = id;
-    }
-
-    public Paciente getPaciente() {
-        return paciente;
-    }
-
-    public void setPaciente(Paciente paciente) {
-        this.paciente = paciente;
-    }
-
-    public Dentista getDentista() {
-        return dentista;
-    }
-
-    public void setDentista(Dentista dentista) {
-        this.dentista = dentista;
     }
 
     public Date getData() {

@@ -5,6 +5,7 @@
     <class>com.unigran.br.projetop2.model.Paciente</class>
     <class>com.unigran.br.projetop2.model.Login</class>
     <class>com.unigran.br.projetop2.model.Material</class>
+    <class>com.unigran.br.projetop2.model.Agendamento</class>
     <properties>
       <property name="javax.persistence.jdbc.url" value="jdbc:postgresql://localhost:5432/postgres"/>
       <property name="javax.persistence.jdbc.user" value="postgres"/>

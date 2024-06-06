@@ -18,6 +18,7 @@ public class Dados {
         em.persist(o);
         etx.commit();
     }
+
     public void atualiza(Object o){
         etx.begin();
         em.merge(o);
@@ -34,6 +35,11 @@ public class Dados {
         }
         etx.commit();
     }
+
+
+
+
+
 
     //----Sla o que palito fez aqui honestamente-----------------------------------------------------------------
     public <T> T buscarPorId(Class<T> clazz, Object id) {
