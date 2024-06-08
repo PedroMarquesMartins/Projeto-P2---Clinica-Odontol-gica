@@ -1,10 +1,11 @@
-package com.unigran.br.projetop2.controllers;
+package com.unigran.br.projetop2.Dao;
 
-import com.unigran.br.projetop2.persistencia.Dao.Dados;
+import com.unigran.br.projetop2.model.Agendamento;
+import com.unigran.br.projetop2.model.Dentista;
 
 import java.util.List;
 
-public class DentistaController implements Controller{
+public class DentistaDao implements Dao {
     @Override
     public String[] getTitulosColunas() {
         return new String[0];
@@ -17,7 +18,8 @@ public class DentistaController implements Controller{
 
     @Override
     public List getListaDados() {
-        return null;
+        return em.createNativeQuery("SELECT * FROM dentista d", Dentista.class)
+                .getResultList();
     }
 
     @Override

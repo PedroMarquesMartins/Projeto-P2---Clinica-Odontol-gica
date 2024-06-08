@@ -1,6 +1,6 @@
-package com.unigran.br.projetop2.persistencia.implementacao;
+package com.unigran.br.projetop2.controllers;
 
-import com.unigran.br.projetop2.controllers.MaterialController;
+import com.unigran.br.projetop2.Dao.MaterialDao;
 import com.unigran.br.projetop2.model.Material;
 
 
@@ -8,13 +8,13 @@ import java.util.List;
 
 public class MaterialImplementacao{
     public static void listarMateriais(){
-        MaterialController MC = new MaterialController();
+        MaterialDao MC = new MaterialDao();
         MC.getListaDados();
     }
 
     public static boolean removerQntInformada(String nomeMaterial,Integer quantidadeRemover) throws Exception {
         boolean sucesso=false;
-        MaterialController MC = new MaterialController();
+        MaterialDao MC = new MaterialDao();
 
         List<Material> materialList = MC.getListaDados();
         for (Material materialL : materialList)
@@ -41,7 +41,7 @@ public class MaterialImplementacao{
 
     public static boolean adicionarQntInformada(String nomeMaterial,Integer quantidadeAdicionar) throws Exception {
         boolean sucesso=false;
-        MaterialController MC = new MaterialController();
+        MaterialDao MC = new MaterialDao();
 
         List<Material> materialList = MC.getListaDados();
         for (Material materialL : materialList)
@@ -74,7 +74,7 @@ public class MaterialImplementacao{
             material.setQuantidade(quantEstoque);
             material.setQuantidade_min(quantMinima);
 
-            MaterialController materialController = new MaterialController();
+            MaterialDao materialController = new MaterialDao();
             materialController.salvar(material);
 
             return true;   //Cadastrado com Sucesso (Mostrar tela)

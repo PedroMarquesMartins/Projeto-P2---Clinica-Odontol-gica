@@ -1,6 +1,6 @@
-package com.unigran.br.projetop2.persistencia.implementacao;
+package com.unigran.br.projetop2.controllers;
 
-import com.unigran.br.projetop2.controllers.LoginController;
+import com.unigran.br.projetop2.Dao.LoginDao;
 import com.unigran.br.projetop2.model.Login;
 
 import java.util.List;
@@ -18,7 +18,7 @@ public class LoginCadastroImplementacao {
             login.setLogin(user);
             login.setPermissao(permissao);
 
-            LoginController loginController = new LoginController();
+            LoginDao loginController = new LoginDao();
             loginController.salvar(login);
 
             return true;   //Cadastrado com Sucesso (Mostrar tela)
@@ -32,7 +32,7 @@ public class LoginCadastroImplementacao {
         boolean sucesso;
         sucesso = false;
         if (senha != null && !senha.isEmpty() && user != null && !user.isEmpty()) {
-            LoginController LC = new LoginController();
+            LoginDao LC = new LoginDao();
             List<Login> loginList = LC.getListaDados();
             for (Login loginL : loginList) {
                 System.out.println("User:"+user+"\nSenha:"+senha);

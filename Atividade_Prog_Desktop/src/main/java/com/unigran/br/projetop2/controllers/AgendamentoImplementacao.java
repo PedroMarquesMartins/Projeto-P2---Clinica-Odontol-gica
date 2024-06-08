@@ -1,11 +1,12 @@
-package com.unigran.br.projetop2.persistencia.implementacao;
+package com.unigran.br.projetop2.controllers;
 
-import com.unigran.br.projetop2.controllers.AgendamentoController;
+import com.unigran.br.projetop2.Dao.AgendamentoDao;
 import com.unigran.br.projetop2.model.Agendamento;
 
 import java.io.File;
 import java.time.LocalTime;
 import java.util.Date;
+import java.util.List;
 
 public class AgendamentoImplementacao {
     public static boolean marcarConsulta(Date data, String observacoes, Double valor, File anexos,Integer h,Integer m) throws Exception { //E agendar horario
@@ -22,23 +23,47 @@ public class AgendamentoImplementacao {
         }
     }
 
-    public static void listarConsulta(){
-        AgendamentoController AC = new AgendamentoController();
+    public static String listarConsulta(){
+        AgendamentoDao AC = new AgendamentoDao();
         AC.getListaDados();
 
-        //Vai ter que percorrer!
-        //Transformar o numero do status em STRINGS concluido, cancelado, etc...
+        List<Agendamento> agendamentoList = AC.getListaDados();
+        for(Agendamento agendamentoL : agendamentoList){
+            Integer statusRecebido;
+            String statusStr=null;
+            statusRecebido= agendamentoL.getStatus();
+
+            switch (statusRecebido){
+                case 1:
+                    statusStr="Agendada";
+                    break;
+
+                case 2:
+                    statusStr="Cancelada";
+                    break;
+
+                case 3:
+                    statusStr="Concluida";
+                    break;
+
+                default:
+                    System.err.print("Default");
+                    break;
+            }
+            return statusStr;
+        }
+        return null;
     }
 
     public static boolean cancelarConsulta(Integer id){
         //Muda o status para cancelada
-            AgendamentoController agendamentoController = new AgendamentoController();
+            AgendamentoDao agendamentoController = new AgendamentoDao();
             agendamentoController.salvarStatus(id,2);
             return true; //Tela: Deu bom
     }
 
     public static boolean concluirConsulta(Integer id){
-            AgendamentoController agendamentoController = new AgendamentoController();
+            AgendamentoDao agendamentoController = new AgendamentoDao();
             agendamentoController.salvarStatus(id, 3);
             return true;
     }
@@ -57,7 +82,7 @@ public class AgendamentoImplementacao {
         agendamento.setHorario(LocalTime.of(h, m));
 
 
-        AgendamentoController agendamentoController = new AgendamentoController();
+        AgendamentoDao agendamentoController = new AgendamentoDao();
         agendamentoController.salvar(agendamento); //Salva
         System.err.print("\nSalvo com sucesso");
     }

@@ -1,10 +1,9 @@
-package com.unigran.br.projetop2.controllers;
+package com.unigran.br.projetop2.Dao;
 
 import com.unigran.br.projetop2.model.Material;
-import com.unigran.br.projetop2.persistencia.Dao.Dados;
 
 import java.util.List;
-public class MaterialController implements Controller{
+public class MaterialDao implements Dao {
     @Override
     public String[] getTitulosColunas() {
         return new String[0];

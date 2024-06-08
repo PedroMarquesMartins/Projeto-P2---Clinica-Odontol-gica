@@ -1,12 +1,10 @@
-package com.unigran.br.projetop2.controllers;
+package com.unigran.br.projetop2.Dao;
 
 import com.unigran.br.projetop2.model.Login;
-import com.unigran.br.projetop2.model.Paciente;
-import com.unigran.br.projetop2.persistencia.Dao.Dados;
 
 import java.util.List;
 
-public class LoginController implements Controller{
+public class LoginDao implements Dao {
     @Override
     public String[] getTitulosColunas() {
         return new String[0];

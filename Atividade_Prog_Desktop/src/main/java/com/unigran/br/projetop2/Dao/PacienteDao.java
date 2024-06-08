@@ -1,11 +1,10 @@
-package com.unigran.br.projetop2.controllers;
+package com.unigran.br.projetop2.Dao;
 
 import com.unigran.br.projetop2.model.Paciente;
-import com.unigran.br.projetop2.persistencia.Dao.Dados;
 
 import java.util.List;
 
-public class PacienteController implements Controller{
+public class PacienteDao implements Dao {
 
     @Override
     public String[] getTitulosColunas() {
