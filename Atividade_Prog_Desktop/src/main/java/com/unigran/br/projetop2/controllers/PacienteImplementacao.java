@@ -1,6 +1,6 @@
-package com.unigran.br.projetop2.persistencia.implementacao;
+package com.unigran.br.projetop2.controllers;
 
-import com.unigran.br.projetop2.controllers.PacienteController;
+import com.unigran.br.projetop2.Dao.PacienteDao;
 import com.unigran.br.projetop2.model.Paciente;
 
 import java.util.Date;
@@ -10,7 +10,7 @@ public class PacienteImplementacao{   //Terá as funções que serão chamadas n
 
     public static void removerPacienteInformado(String nomeInformado)
     {
-        PacienteController PC = new PacienteController();
+        PacienteDao PC = new PacienteDao();
 
         List<Paciente> pacienteList = PC.getListaDados();
         for (Paciente pacienteL : pacienteList)
@@ -23,19 +23,19 @@ public class PacienteImplementacao{   //Terá as funções que serão chamadas n
 
     public static void listarPacientes()
     {
-        PacienteController PC = new PacienteController();
+        PacienteDao PC = new PacienteDao();
         PC.getListaDados(); //PacienteController
     }
 
     public static void buscarPacienteInformado(String nomeInformado)
     {
-        PacienteController PC = new PacienteController();
+        PacienteDao PC = new PacienteDao();
         PC.listaDadosPorNome(nomeInformado);
     }
 
     public static void buscarPacienteCpfInformado(String cpfInformado)
     {
-        PacienteController PC = new PacienteController();
+        PacienteDao PC = new PacienteDao();
         PC.listaDadosPorCpf(cpfInformado);
     }
 
@@ -52,7 +52,7 @@ public class PacienteImplementacao{   //Terá as funções que serão chamadas n
             paciente.setEmail(email);
             paciente.setResponsavel(responsavel);
 
-            PacienteController pacienteController = new PacienteController();
+            PacienteDao pacienteController = new PacienteDao();
             pacienteController.salvar(paciente);
             return true;
         }else{

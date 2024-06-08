@@ -1,11 +1,10 @@
-package com.unigran.br.projetop2.controllers;
+package com.unigran.br.projetop2.Dao;
 
 import com.unigran.br.projetop2.model.Agendamento;
-import com.unigran.br.projetop2.persistencia.Dao.Dados;
 
 import java.util.List;
 
-public class AgendamentoController implements Controller {
+public class AgendamentoDao implements Dao {
 
     @Override
     public String[] getTitulosColunas() {

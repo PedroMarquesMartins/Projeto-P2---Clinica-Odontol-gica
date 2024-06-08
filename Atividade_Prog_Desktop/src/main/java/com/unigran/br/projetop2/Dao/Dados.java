@@ -1,4 +1,4 @@
-package com.unigran.br.projetop2.persistencia.Dao;
+package com.unigran.br.projetop2.Dao;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
@@ -6,7 +6,7 @@ import javax.persistence.EntityTransaction;
 import javax.persistence.Persistence;
 import java.util.List;
 
-public class Dados {
+public class Dados{
     EntityManagerFactory emf=
             Persistence.
                     createEntityManagerFactory("br.unigran_Atividade_Prog_Desktop_jar_1.0-SNAPSHOTPU");
