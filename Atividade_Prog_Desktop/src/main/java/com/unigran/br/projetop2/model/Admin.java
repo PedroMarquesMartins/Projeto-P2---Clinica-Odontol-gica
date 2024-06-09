@@ -1,30 +1,28 @@
 package com.unigran.br.projetop2.model;
 
+import lombok.Getter;
+import lombok.Setter;
+
 import java.io.Serializable;
+import java.util.List;
 import javax.persistence.*;
 
+@Getter
+@Setter
 @Entity
 public class Admin implements Serializable {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
 
-    @OneToOne
+    // Associações
+
+    @OneToOne(mappedBy = "admin", cascade = CascadeType.ALL)
     private Login login;
 
-    public Integer getId() {
-        return id;
-    }
+    @OneToMany(mappedBy = "admin", cascade = CascadeType.ALL)
+    private List<Agendamento> agendamentos;
 
-    public void setId(Integer id) {
-        this.id = id;
-    }
+    // Atributos
 
-    public Login getLogin() {
-        return login;
-    }
-
-    public void setLogin(Login login) {
-        this.login = login;
-    }
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 }
