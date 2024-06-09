@@ -1,13 +1,23 @@
 package com.unigran.br.projetop2.Main;
 
 import com.unigran.br.projetop2.controllers.DentistaImplementacao;
+import com.unigran.br.projetop2.views.TelaLogin;
+import com.unigran.br.projetop2.views.TelasAdm.TelaAdministrador;
 
 public class main {
     public static void main(String[] args) throws Exception {
+        TelaLogin telalogin = new TelaLogin();
+        telalogin.setVisible(true);
+
+        //TelaAdministrador telaAdministrador = new TelaAdministrador();
+        //telaAdministrador.setVisible(true);
+
         //Teste de Dentista a seguir:
+        /*
         String nome ="DentistaLucas";
         String cro = "croAQUIMui";
         DentistaImplementacao.salvarDentista(nome,cro);
+        */
 
         //Teste de Agendamento a seguir:
         /*
