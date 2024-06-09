@@ -4,41 +4,26 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d57cb34f-587f-4fb4-a0cb-bd35152aeae8" name="Changes" comment="Mais Lógicas Complexos - Branch Alpha 0.7.5&#10;&#10;Desenvolvimento profundo da lógica complexa, e criação de funcionalidades.&#10;&#10;Mais mudanças no comportamento de classes.&#10;&#10;By João Pedro Marques Martins&#10;&#10;(Telas só serão implementadas após o término do desenvolvimento da lógica complexa)">
+    <list default="true" id="d57cb34f-587f-4fb4-a0cb-bd35152aeae8" name="Changes" comment="Lógicas e Organização - Branch Alpha 0.7.6&#10;&#10;Desenvolvimento de Algumas lógicas complexas a mais. Inicio de testes de listagem. Ultima etapa antes do desenvolvimento das telas.&#10;&#10;Mais mudanças no comportamento de classes.&#10;&#10;By João Pedro Marques Martins&#10;&#10;(Telas só serão implementadas após o término do desenvolvimento da lógica complexa)">
+      <change afterPath="$PROJECT_DIR$/Atividade_Prog_Desktop/src/main/java/com/unigran/br/projetop2/controllers/CadastroImplementacao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Atividade_Prog_Desktop/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Atividade_Prog_Desktop/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Atividade_Prog_Desktop/src/main/java/Main/main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Atividade_Prog_Desktop/src/main/java/com/unigran/br/projetop2/Main/main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Atividade_Prog_Desktop/src/main/java/com/unigran/br/projetop2/controllers/AgendamentoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Atividade_Prog_Desktop/src/main/java/com/unigran/br/projetop2/Dao/AgendamentoDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Atividade_Prog_Desktop/src/main/java/com/unigran/br/projetop2/controllers/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/Atividade_Prog_Desktop/src/main/java/com/unigran/br/projetop2/Dao/Dao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Atividade_Prog_Desktop/src/main/java/com/unigran/br/projetop2/controllers/DentistaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Atividade_Prog_Desktop/src/main/java/com/unigran/br/projetop2/Dao/DentistaDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Atividade_Prog_Desktop/src/main/java/com/unigran/br/projetop2/controllers/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Atividade_Prog_Desktop/src/main/java/com/unigran/br/projetop2/Dao/LoginDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Atividade_Prog_Desktop/src/main/java/com/unigran/br/projetop2/controllers/MaterialController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Atividade_Prog_Desktop/src/main/java/com/unigran/br/projetop2/Dao/MaterialDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Atividade_Prog_Desktop/src/main/java/com/unigran/br/projetop2/controllers/PacienteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Atividade_Prog_Desktop/src/main/java/com/unigran/br/projetop2/Dao/PacienteDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Atividade_Prog_Desktop/src/main/java/com/unigran/br/projetop2/model/Dentista.java" beforeDir="false" afterPath="$PROJECT_DIR$/Atividade_Prog_Desktop/src/main/java/com/unigran/br/projetop2/model/Dentista.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Atividade_Prog_Desktop/src/main/java/com/unigran/br/projetop2/persistencia/Dao/Dados.java" beforeDir="false" afterPath="$PROJECT_DIR$/Atividade_Prog_Desktop/src/main/java/com/unigran/br/projetop2/Dao/Dados.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Atividade_Prog_Desktop/src/main/java/com/unigran/br/projetop2/persistencia/implementacao/AgendamentoImplementacao.java" beforeDir="false" afterPath="$PROJECT_DIR$/Atividade_Prog_Desktop/src/main/java/com/unigran/br/projetop2/controllers/AgendamentoImplementacao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Atividade_Prog_Desktop/src/main/java/com/unigran/br/projetop2/persistencia/implementacao/DentistaImplementacao.java" beforeDir="false" afterPath="$PROJECT_DIR$/Atividade_Prog_Desktop/src/main/java/com/unigran/br/projetop2/controllers/DentistaImplementacao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Atividade_Prog_Desktop/src/main/java/com/unigran/br/projetop2/persistencia/implementacao/LoginCadastroImplementacao.java" beforeDir="false" afterPath="$PROJECT_DIR$/Atividade_Prog_Desktop/src/main/java/com/unigran/br/projetop2/controllers/LoginCadastroImplementacao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Atividade_Prog_Desktop/src/main/java/com/unigran/br/projetop2/persistencia/implementacao/MaterialImplementacao.java" beforeDir="false" afterPath="$PROJECT_DIR$/Atividade_Prog_Desktop/src/main/java/com/unigran/br/projetop2/controllers/MaterialImplementacao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Atividade_Prog_Desktop/src/main/java/com/unigran/br/projetop2/persistencia/implementacao/PacienteImplementacao.java" beforeDir="false" afterPath="$PROJECT_DIR$/Atividade_Prog_Desktop/src/main/java/com/unigran/br/projetop2/controllers/PacienteImplementacao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Atividade_Prog_Desktop/src/main/resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Atividade_Prog_Desktop/src/main/resources/META-INF/persistence.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Atividade_Prog_Desktop/target/classes/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Atividade_Prog_Desktop/target/classes/META-INF/persistence.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Atividade_Prog_Desktop/target/classes/Main/main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Atividade_Prog_Desktop/target/classes/com/unigran/br/projetop2/Controllers/AgendamentoController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Atividade_Prog_Desktop/target/classes/com/unigran/br/projetop2/Controllers/Controller.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Atividade_Prog_Desktop/target/classes/com/unigran/br/projetop2/Controllers/DentistaController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Atividade_Prog_Desktop/target/classes/com/unigran/br/projetop2/Controllers/LoginController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Atividade_Prog_Desktop/target/classes/com/unigran/br/projetop2/Controllers/MaterialController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Atividade_Prog_Desktop/target/classes/com/unigran/br/projetop2/Controllers/PacienteController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Atividade_Prog_Desktop/target/classes/com/unigran/br/projetop2/Persistencia/Dao/Dados.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Atividade_Prog_Desktop/target/classes/com/unigran/br/projetop2/Persistencia/implementacao/AgendamentoImplementacao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Atividade_Prog_Desktop/target/classes/com/unigran/br/projetop2/Persistencia/implementacao/LoginCadastroImplementacao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Atividade_Prog_Desktop/target/classes/com/unigran/br/projetop2/Persistencia/implementacao/MaterialImplementacao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Atividade_Prog_Desktop/target/classes/com/unigran/br/projetop2/Persistencia/implementacao/PacienteImplementacao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Atividade_Prog_Desktop/target/classes/com/unigran/br/projetop2/model/Dentista.class" beforeDir="false" afterPath="$PROJECT_DIR$/Atividade_Prog_Desktop/target/classes/com/unigran/br/projetop2/model/Dentista.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Atividade_Prog_Desktop/target/classes/com/unigran/br/projetop2/model/Dentista_.class" beforeDir="false" afterPath="$PROJECT_DIR$/Atividade_Prog_Desktop/target/classes/com/unigran/br/projetop2/model/Dentista_.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Atividade_Prog_Desktop/src/main/java/com/unigran/br/projetop2/Main/main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Atividade_Prog_Desktop/src/main/java/com/unigran/br/projetop2/Main/main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Atividade_Prog_Desktop/src/main/java/com/unigran/br/projetop2/controllers/LoginCadastroImplementacao.java" beforeDir="false" afterPath="$PROJECT_DIR$/Atividade_Prog_Desktop/src/main/java/com/unigran/br/projetop2/controllers/LoginImplementacao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Atividade_Prog_Desktop/target/classes/com/unigran/br/projetop2/Controllers/DentistaImplementacao.class" beforeDir="false" afterPath="$PROJECT_DIR$/Atividade_Prog_Desktop/target/classes/com/unigran/br/projetop2/Controllers/DentistaImplementacao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Atividade_Prog_Desktop/target/classes/com/unigran/br/projetop2/Controllers/LoginCadastroImplementacao.class" beforeDir="false" afterPath="$PROJECT_DIR$/Atividade_Prog_Desktop/target/classes/com/unigran/br/projetop2/Controllers/LoginCadastroImplementacao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Atividade_Prog_Desktop/target/classes/com/unigran/br/projetop2/Dao/DentistaDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/Atividade_Prog_Desktop/target/classes/com/unigran/br/projetop2/Dao/DentistaDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Atividade_Prog_Desktop/target/classes/com/unigran/br/projetop2/Main/main.class" beforeDir="false" afterPath="$PROJECT_DIR$/Atividade_Prog_Desktop/target/classes/com/unigran/br/projetop2/Main/main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Atividade_Prog_Desktop/target/generated-sources/annotations/com/unigran/br/projetop2/model/Admin_.java" beforeDir="false" afterPath="$PROJECT_DIR$/Atividade_Prog_Desktop/target/generated-sources/annotations/com/unigran/br/projetop2/model/Admin_.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Atividade_Prog_Desktop/target/generated-sources/annotations/com/unigran/br/projetop2/model/Agendamento_.java" beforeDir="false" afterPath="$PROJECT_DIR$/Atividade_Prog_Desktop/target/generated-sources/annotations/com/unigran/br/projetop2/model/Agendamento_.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Atividade_Prog_Desktop/target/generated-sources/annotations/com/unigran/br/projetop2/model/Dentista_.java" beforeDir="false" afterPath="$PROJECT_DIR$/Atividade_Prog_Desktop/target/generated-sources/annotations/com/unigran/br/projetop2/model/Dentista_.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Atividade_Prog_Desktop/target/generated-sources/annotations/com/unigran/br/projetop2/model/Gerente_.java" beforeDir="false" afterPath="$PROJECT_DIR$/Atividade_Prog_Desktop/target/generated-sources/annotations/com/unigran/br/projetop2/model/Gerente_.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Atividade_Prog_Desktop/target/generated-sources/annotations/com/unigran/br/projetop2/model/Login_.java" beforeDir="false" afterPath="$PROJECT_DIR$/Atividade_Prog_Desktop/target/generated-sources/annotations/com/unigran/br/projetop2/model/Login_.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Atividade_Prog_Desktop/target/generated-sources/annotations/com/unigran/br/projetop2/model/Material_.java" beforeDir="false" afterPath="$PROJECT_DIR$/Atividade_Prog_Desktop/target/generated-sources/annotations/com/unigran/br/projetop2/model/Material_.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Atividade_Prog_Desktop/target/generated-sources/annotations/com/unigran/br/projetop2/model/Paciente_.java" beforeDir="false" afterPath="$PROJECT_DIR$/Atividade_Prog_Desktop/target/generated-sources/annotations/com/unigran/br/projetop2/model/Paciente_.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Atividade_Prog_Desktop/target/generated-sources/annotations/com/unigran/br/projetop2/model/Prontuario_.java" beforeDir="false" afterPath="$PROJECT_DIR$/Atividade_Prog_Desktop/target/generated-sources/annotations/com/unigran/br/projetop2/model/Prontuario_.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Atividade_Prog_Desktop/target/generated-sources/annotations/com/unigran/br/projetop2/model/Prontuarios_.java" beforeDir="false" afterPath="$PROJECT_DIR$/Atividade_Prog_Desktop/target/generated-sources/annotations/com/unigran/br/projetop2/model/Prontuarios_.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Atividade_Prog_Desktop/target/generated-sources/annotations/com/unigran/br/projetop2/model/Recepcionista_.java" beforeDir="false" afterPath="$PROJECT_DIR$/Atividade_Prog_Desktop/target/generated-sources/annotations/com/unigran/br/projetop2/model/Recepcionista_.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,7 +46,7 @@
     </option>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="Mais-Lógicas-Complexas-JoãoPedroMarques-v0.7.5" />
+        <entry key="$PROJECT_DIR$" value="Organização-Geral-JoãoPedroMarques-v0.7.6" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -96,7 +81,8 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "Organização-Geral-JoãoPedroMarques-v0.7.6",
+    "UI_DESIGNER_EDITOR_MODE.PaletteManager.WIDTH": "523",
+    "git-widget-placeholder": "Inicio-Das-Telas-JoãoPedroMarques-v0.8",
     "ignore.virus.scanning.warn.message": "true",
     "last_opened_file_path": "C:/Users/Pedro/Desktop/Central",
     "project.structure.last.edited": "Modules",
@@ -185,7 +171,15 @@
       <option name="project" value="LOCAL" />
       <updated>1717711896825</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Lógicas e Organização - Branch Alpha 0.7.6&#10;&#10;Desenvolvimento de Algumas lógicas complexas a mais. Inicio de testes de listagem. Ultima etapa antes do desenvolvimento das telas.&#10;&#10;Mais mudanças no comportamento de classes.&#10;&#10;By João Pedro Marques Martins&#10;&#10;(Telas só serão implementadas após o término do desenvolvimento da lógica complexa)">
+      <option name="closed" value="true" />
+      <created>1717886473672</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1717886473672</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -206,7 +200,8 @@
     <MESSAGE value="Controllers simples - Primeira Branch&#10;&#10;Iniciando o desenvolvimento da lógica complexa e implementação das entidadades.&#10;&#10;Adição de novas entidades necessárias, mudanças no comportamento de classes e adições de DAO, relacionamento com o banco alterado, entre outras." />
     <MESSAGE value="Controllers Complexos - Branch Alpha 0.7&#10;&#10;Desenvolvimento da lógica complexa, alteração de entidades, relação com banco de dados, criação de funcionalidades e introdução de validação de dados.&#10;&#10;Mais mudanças no comportamento de classes.&#10;&#10;By João Pedro Marques Martins&#10;&#10;(Telas só serão implementadas após o término do desenvolvimento da lógica complexa)" />
     <MESSAGE value="Mais Lógicas Complexos - Branch Alpha 0.7.5&#10;&#10;Desenvolvimento profundo da lógica complexa, e criação de funcionalidades.&#10;&#10;Mais mudanças no comportamento de classes.&#10;&#10;By João Pedro Marques Martins&#10;&#10;(Telas só serão implementadas após o término do desenvolvimento da lógica complexa)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Mais Lógicas Complexos - Branch Alpha 0.7.5&#10;&#10;Desenvolvimento profundo da lógica complexa, e criação de funcionalidades.&#10;&#10;Mais mudanças no comportamento de classes.&#10;&#10;By João Pedro Marques Martins&#10;&#10;(Telas só serão implementadas após o término do desenvolvimento da lógica complexa)" />
+    <MESSAGE value="Lógicas e Organização - Branch Alpha 0.7.6&#10;&#10;Desenvolvimento de Algumas lógicas complexas a mais. Inicio de testes de listagem. Ultima etapa antes do desenvolvimento das telas.&#10;&#10;Mais mudanças no comportamento de classes.&#10;&#10;By João Pedro Marques Martins&#10;&#10;(Telas só serão implementadas após o término do desenvolvimento da lógica complexa)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Lógicas e Organização - Branch Alpha 0.7.6&#10;&#10;Desenvolvimento de Algumas lógicas complexas a mais. Inicio de testes de listagem. Ultima etapa antes do desenvolvimento das telas.&#10;&#10;Mais mudanças no comportamento de classes.&#10;&#10;By João Pedro Marques Martins&#10;&#10;(Telas só serão implementadas após o término do desenvolvimento da lógica complexa)" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
