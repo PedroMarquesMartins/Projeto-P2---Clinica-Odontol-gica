@@ -14,19 +14,19 @@ public class Login implements Serializable {
 
     // Associações
 
-    @OneToOne(mappedBy = "login")
+    @OneToOne
     @JoinColumn(name = "admin_id", referencedColumnName = "id")
     private Admin admin;
 
-    @OneToOne(mappedBy = "login")
+    @OneToOne
     @JoinColumn(name = "recepcionista_id", referencedColumnName = "id")
     private Recepcionista recepcionista;
 
-    @OneToOne(mappedBy = "login")
+    @OneToOne
     @JoinColumn(name = "gerente_id", referencedColumnName = "id")
     private Gerente gerente;
 
-    @OneToOne(mappedBy = "login")
+    @OneToOne
     @JoinColumn(name = "dentista_id", referencedColumnName = "id")
     private Dentista dentista;
 

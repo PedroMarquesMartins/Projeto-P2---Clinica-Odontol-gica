@@ -14,7 +14,7 @@ public class Dentista implements Serializable {
 
     //Asssociações
 
-    @OneToMany(mappedBy = "dentista", cascade = CascadeType.ALL)
+    @OneToOne(mappedBy = "dentista", cascade = CascadeType.ALL)
     private Login login;
 
     @OneToMany(mappedBy = "dentista", cascade = CascadeType.ALL)
