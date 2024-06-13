@@ -25,6 +25,11 @@ public class CadastroImplementacao {
         }
     }
 
+    public static void administrarCadastros(){
+
+
+    }
+
     public static Integer verificaPermissao(String permissao){
         Integer permissaoInteger;
 
