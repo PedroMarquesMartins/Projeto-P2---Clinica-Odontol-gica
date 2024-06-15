@@ -27,6 +27,7 @@ public class LoginImplementacao {
                         //Para descobir... Que tal:
                         int permissao = loginL.getPermissao();
 
+
                         //Para fazer isso aqui em cima, vai precisar primeiro adicionar esse campo na entidade e no banc -> tá FEITO :D
 
                         //Dependendo do tipo, haverá um CASE para cada, chamando as telas de acordo.

@@ -1,0 +1,74 @@
+create database ClinicaOdontologicaP2;
+
+create table Login (
+id serial primary key,
+login varchar(10),
+senha varchar(15),
+permissao Integer
+);
+
+create table Gerente (      
+id serial primary key,
+nome varchar(100)
+);
+
+create table Material (
+id serial primary key,
+nome varchar(100),
+quantidade int,
+quantidade_min int
+);
+
+create table Administrador (
+id serial primary key,
+nome varchar(100)
+);
+
+create table Dentista (
+cro serial primary key,
+nome varchar(100)
+);
+
+create table Recepcionista (
+id serial primary key,
+nome varchar(100)
+);
+
+create table Prontuario(
+id serial primary key,
+historico varchar(500)
+);
+
+
+create table Paciente (
+id serial primary key,
+nome varchar(100),
+cpf varchar(15),
+data_nasc date,
+endereco Varchar(100),
+convenios Varchar(50),
+email Varchar(50),
+responsavel varchar(100),
+telefone varchar(28)           
+);
+
+
+create table Agendamento (
+id serial primary key,
+status Integer,
+observacao varchar(500),
+data date, horario TIME,
+NomePaciente varchar(50),           
+NomeDentista varchar(50),       
+valor float
+);
+
+select * from administrador a ;
+select * from agendamento a2 ; 
+select * from dentista d ;
+select * from gerente g ;
+select * from login l ;
+select * from material m ;
+select * from paciente p ;  
+select * from prontuario p2 ;
+select * from recepcionista r ;

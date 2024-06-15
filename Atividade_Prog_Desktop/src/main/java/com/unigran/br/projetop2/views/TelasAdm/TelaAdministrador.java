@@ -4,10 +4,24 @@
  */
 package com.unigran.br.projetop2.views.TelasAdm;
 
+import com.unigran.br.projetop2.Dao.PacienteDao;
 import com.unigran.br.projetop2.controllers.CadastroImplementacao;
+import com.unigran.br.projetop2.controllers.PacienteImplementacao;
+import com.unigran.br.projetop2.model.Paciente;
 import com.unigran.br.projetop2.views.Materiais.TelaGerenciarMateriais;
 import com.unigran.br.projetop2.views.TelasConsulta.TelaAgendamento;
 import com.unigran.br.projetop2.views.TelasPacientes.TelaGerenciarPacientes;
+import net.sf.jasperreports.engine.*;
+import net.sf.jasperreports.engine.data.JRMapCollectionDataSource;
+import net.sf.jasperreports.engine.util.JRLoader;
+import net.sf.jasperreports.view.JasperViewer;
+
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -41,6 +55,7 @@ public class TelaAdministrador extends javax.swing.JFrame {
         btnGerConsultas = new javax.swing.JButton();
         btnSair = new javax.swing.JButton();
         btnCadastrarFunc1 = new javax.swing.JButton();
+        btnGerarRelatorio = new javax.swing.JToggleButton();
         jPanel3 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
@@ -106,6 +121,13 @@ public class TelaAdministrador extends javax.swing.JFrame {
             }
         });
 
+        btnGerarRelatorio.setText("Relatório Pacientes");
+        btnGerarRelatorio.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnGerarRelatorioActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
@@ -122,6 +144,7 @@ public class TelaAdministrador extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(btnGerarRelatorio, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(btnCadastrarFunc1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(btnGerConsultas, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(btnCadastrarFunc, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -144,6 +167,8 @@ public class TelaAdministrador extends javax.swing.JFrame {
                 .addComponent(btnGerMateriais)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(btnGerConsultas)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btnGerarRelatorio)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(btnSair)
                 .addContainerGap())
@@ -240,6 +265,39 @@ public class TelaAdministrador extends javax.swing.JFrame {
         new TelaListarFunc().setVisible(true);
     }//GEN-LAST:event_btnCadastrarFunc1ActionPerformed
 
+    private void btnGerarRelatorioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGerarRelatorioActionPerformed
+       // PacienteDao pacienteDao = new PacienteDao();
+        //PacienteImplementacao pacienteImplementacao = new PacienteImplementacao();
+try{
+        Map<String, Object> parameters = new HashMap<>();
+        parameters.put("title", "Relatorio Pacientes");
+
+        Collection<Map<String, ?>> data = new ArrayList<>();
+        for (Paciente pacienteL : PacienteImplementacao.listarPacientes()) {
+            Map<String, Object> item = new HashMap<>();
+
+            item.put("id",Integer.parseInt(String.valueOf(pacienteL.getId())));
+            item.put("nome",pacienteL.getNome());
+            item.put("cpf",pacienteL.getNome());
+            //item.put("data_nasc",pacienteL.getDataNascimento());
+            item.put("email",pacienteL.getEmail());
+            item.put("convenio",pacienteL.getConvenios());
+            item.put("endereco",pacienteL.getEndereco());
+            data.add(item);
+        }
+
+        Collection<Map<String, ?>> dataS = data;
+        JRDataSource dataSource = new JRMapCollectionDataSource(dataS);
+        JasperReport jr = (JasperReport) JRLoader.loadObject(getClass().getResource("/relatorios/relatorio.jasper"));
+        JasperPrint jasperPrint = JasperFillManager.fillReport(jr, parameters, dataSource);
+
+        JasperViewer jv = new JasperViewer(jasperPrint, false);
+        jv.setVisible(true);
+
+    }catch (JRException e){
+        Logger.getLogger(TelaAdministrador.class.getName()).log(Level.SEVERE, null, e);
+    }
+    }
     /**
      * @param args the command line arguments
      */
@@ -281,6 +339,7 @@ public class TelaAdministrador extends javax.swing.JFrame {
     private javax.swing.JButton btnGerConsultas;
     private javax.swing.JButton btnGerMateriais;
     private javax.swing.JButton btnGerPacientes;
+    private javax.swing.JToggleButton btnGerarRelatorio;
     private javax.swing.JButton btnSair;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;

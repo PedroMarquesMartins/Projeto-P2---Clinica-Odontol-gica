@@ -6,9 +6,25 @@ package com.unigran.br.projetop2.views.TelasFunc;
 
 import com.unigran.br.projetop2.views.TelasAdm.*;
 import com.unigran.br.projetop2.controllers.CadastroImplementacao;
+import com.unigran.br.projetop2.controllers.PacienteImplementacao;
+import com.unigran.br.projetop2.model.Paciente;
 import com.unigran.br.projetop2.views.Materiais.TelaGerenciarMateriais;
 import com.unigran.br.projetop2.views.TelasConsulta.TelaAgendamento;
 import com.unigran.br.projetop2.views.TelasPacientes.TelaGerenciarPacientes;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import net.sf.jasperreports.engine.JRDataSource;
+import net.sf.jasperreports.engine.JRException;
+import net.sf.jasperreports.engine.JasperFillManager;
+import net.sf.jasperreports.engine.JasperPrint;
+import net.sf.jasperreports.engine.JasperReport;
+import net.sf.jasperreports.engine.data.JRMapCollectionDataSource;
+import net.sf.jasperreports.engine.util.JRLoader;
+import net.sf.jasperreports.view.JasperViewer;
 
 /**
  *
@@ -39,6 +55,7 @@ public class TelaRecepcionista extends javax.swing.JFrame {
         btnGerenciarPacientes = new javax.swing.JButton();
         btnSair = new javax.swing.JButton();
         btnGerAgendamentos = new javax.swing.JButton();
+        btnGerarRelatorio = new javax.swing.JToggleButton();
         jPanel3 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
@@ -78,6 +95,13 @@ public class TelaRecepcionista extends javax.swing.JFrame {
             }
         });
 
+        btnGerarRelatorio.setText("Relatório Pacientes");
+        btnGerarRelatorio.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnGerarRelatorioActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
@@ -94,7 +118,8 @@ public class TelaRecepcionista extends javax.swing.JFrame {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(btnGerenciarPacientes, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnGerAgendamentos, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(btnGerAgendamentos, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnGerarRelatorio, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
                 .addGap(0, 7, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
@@ -106,6 +131,8 @@ public class TelaRecepcionista extends javax.swing.JFrame {
                 .addComponent(btnGerenciarPacientes)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(btnGerAgendamentos)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btnGerarRelatorio)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(btnSair)
                 .addGap(16, 16, 16))
@@ -115,7 +142,7 @@ public class TelaRecepcionista extends javax.swing.JFrame {
 
         jLabel2.setBackground(new java.awt.Color(0, 0, 0));
         jLabel2.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel2.setText("Olá, Gerente");
+        jLabel2.setText("Olá, Recepcionista");
 
         jLabel3.setText("O que temos para hoje?");
 
@@ -188,6 +215,39 @@ public class TelaRecepcionista extends javax.swing.JFrame {
         new TelaAgendamento().setVisible(true);
     }//GEN-LAST:event_btnGerAgendamentosActionPerformed
 
+    private void btnGerarRelatorioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGerarRelatorioActionPerformed
+        // TODO add your handling code here:
+        try{
+        Map<String, Object> parameters = new HashMap<>();
+        parameters.put("title", "Relatorio Pacientes");
+
+        Collection<Map<String, ?>> data = new ArrayList<>();
+        for (Paciente pacienteL : PacienteImplementacao.listarPacientes()) {
+            Map<String, Object> item = new HashMap<>();
+
+            item.put("id",Integer.parseInt(String.valueOf(pacienteL.getId())));
+            item.put("nome",pacienteL.getNome());
+            item.put("cpf",pacienteL.getNome());
+            //item.put("data_nasc",pacienteL.getDataNascimento());
+            item.put("email",pacienteL.getEmail());
+            item.put("convenio",pacienteL.getConvenios());
+            item.put("endereco",pacienteL.getEndereco());
+            data.add(item);
+        }
+
+        Collection<Map<String, ?>> dataS = data;
+        JRDataSource dataSource = new JRMapCollectionDataSource(dataS);
+        JasperReport jr = (JasperReport) JRLoader.loadObject(getClass().getResource("/relatorios/relatorio.jasper"));
+        JasperPrint jasperPrint = JasperFillManager.fillReport(jr, parameters, dataSource);
+
+        JasperViewer jv = new JasperViewer(jasperPrint, false);
+        jv.setVisible(true);
+
+    }catch (JRException e){
+        Logger.getLogger(TelaRecepcionista.class.getName()).log(Level.SEVERE, null, e);
+    }
+    }//GEN-LAST:event_btnGerarRelatorioActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -232,6 +292,7 @@ public class TelaRecepcionista extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnGerAgendamentos;
+    private javax.swing.JToggleButton btnGerarRelatorio;
     private javax.swing.JButton btnGerenciarPacientes;
     private javax.swing.JButton btnSair;
     private javax.swing.JLabel jLabel1;
