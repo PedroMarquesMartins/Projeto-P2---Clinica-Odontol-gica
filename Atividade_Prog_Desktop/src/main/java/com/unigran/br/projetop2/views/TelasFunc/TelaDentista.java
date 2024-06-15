@@ -4,10 +4,8 @@
  */
 package com.unigran.br.projetop2.views.TelasFunc;
 
-import com.unigran.br.projetop2.views.TelasAdm.*;
-import com.unigran.br.projetop2.controllers.CadastroImplementacao;
-import com.unigran.br.projetop2.views.Materiais.TelaGerenciarMateriais;
 import com.unigran.br.projetop2.views.TelasConsulta.TelaAgendamento;
+import com.unigran.br.projetop2.views.TelasPacientes.TelaCadastrarPacientes;
 import com.unigran.br.projetop2.views.TelasPacientes.TelaGerenciarPacientes;
 
 /**
@@ -19,7 +17,7 @@ public class TelaDentista extends javax.swing.JFrame {
     /**
      * Creates new form TelaAdministrador
      */
-    public TelaDentista() {
+    public TelaDentista(){
         initComponents();
         pack();
     }
@@ -38,6 +36,8 @@ public class TelaDentista extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         btnGerConsultas = new javax.swing.JButton();
         btnSair = new javax.swing.JButton();
+        btnCadastrarPacientes = new javax.swing.JButton();
+        btnGerenciarPacientes = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
@@ -69,6 +69,22 @@ public class TelaDentista extends javax.swing.JFrame {
             }
         });
 
+        btnCadastrarPacientes.setFont(new java.awt.Font("Segoe UI", 0, 10)); // NOI18N
+        btnCadastrarPacientes.setText("Cadastrar Pacientes");
+        btnCadastrarPacientes.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCadastrarPacientesActionPerformed(evt);
+            }
+        });
+
+        btnGerenciarPacientes.setFont(new java.awt.Font("Segoe UI", 0, 10)); // NOI18N
+        btnGerenciarPacientes.setText("Gerenciar Pacientes");
+        btnGerenciarPacientes.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnGerenciarPacientesActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
@@ -82,7 +98,9 @@ public class TelaDentista extends javax.swing.JFrame {
                         .addGap(14, 14, 14)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(btnGerConsultas, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel1))))
+                            .addComponent(jLabel1)
+                            .addComponent(btnCadastrarPacientes, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(btnGerenciarPacientes, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
                 .addGap(38, 38, 38))
         );
         jPanel2Layout.setVerticalGroup(
@@ -92,6 +110,10 @@ public class TelaDentista extends javax.swing.JFrame {
                 .addComponent(jLabel1)
                 .addGap(26, 26, 26)
                 .addComponent(btnGerConsultas)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(btnCadastrarPacientes)
+                .addGap(12, 12, 12)
+                .addComponent(btnGerenciarPacientes)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(btnSair)
                 .addContainerGap())
@@ -169,6 +191,15 @@ public class TelaDentista extends javax.swing.JFrame {
         new TelaAgendamento().setVisible(true);
     }//GEN-LAST:event_btnGerConsultasActionPerformed
 
+    private void btnCadastrarPacientesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCadastrarPacientesActionPerformed
+        new TelaCadastrarPacientes().setVisible(true);
+    }//GEN-LAST:event_btnCadastrarPacientesActionPerformed
+
+    private void btnGerenciarPacientesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGerenciarPacientesActionPerformed
+        // TODO add your handling code here:
+        new TelaGerenciarPacientes().setVisible(true);
+    }//GEN-LAST:event_btnGerenciarPacientesActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -186,17 +217,19 @@ public class TelaDentista extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(TelaDentista.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaGerente.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(TelaDentista.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaGerente.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(TelaDentista.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaGerente.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(TelaDentista.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaGerente.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
         //</editor-fold>
-
+        //</editor-fold>
+        //</editor-fold>
+       
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
@@ -206,7 +239,9 @@ public class TelaDentista extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnCadastrarPacientes;
     private javax.swing.JButton btnGerConsultas;
+    private javax.swing.JButton btnGerenciarPacientes;
     private javax.swing.JButton btnSair;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;

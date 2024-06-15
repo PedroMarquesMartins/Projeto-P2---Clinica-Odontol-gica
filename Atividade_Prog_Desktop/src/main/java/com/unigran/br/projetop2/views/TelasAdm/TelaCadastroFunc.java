@@ -4,7 +4,11 @@
  */
 package com.unigran.br.projetop2.views.TelasAdm;
 
+import com.unigran.br.projetop2.controllers.AdminImplementacao;
 import com.unigran.br.projetop2.controllers.CadastroImplementacao;
+import com.unigran.br.projetop2.controllers.DentistaImplementacao;
+import com.unigran.br.projetop2.controllers.GerenteImplementacao;
+import com.unigran.br.projetop2.controllers.RecepcionistaImplementacao;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
@@ -49,6 +53,8 @@ public class TelaCadastroFunc extends javax.swing.JFrame {
         senha = new javax.swing.JPasswordField();
         user = new javax.swing.JTextField();
         btnCadastrar = new javax.swing.JButton();
+        jLabel8 = new javax.swing.JLabel();
+        txtNome = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setResizable(false);
@@ -140,6 +146,16 @@ public class TelaCadastroFunc extends javax.swing.JFrame {
             }
         });
 
+        jLabel8.setBackground(new java.awt.Color(0, 0, 0));
+        jLabel8.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel8.setText("Informe o nome real");
+
+        txtNome.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtNomeActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
@@ -154,14 +170,16 @@ public class TelaCadastroFunc extends javax.swing.JFrame {
                         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                             .addComponent(jLabel6, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(jLabel5, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel7, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(jLabel7, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jLabel8, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addGap(18, 18, 18)
                         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(btnCadastrar)
                             .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                 .addComponent(permissao, 0, 173, Short.MAX_VALUE)
                                 .addComponent(senha)
-                                .addComponent(user)))))
+                                .addComponent(user)
+                                .addComponent(txtNome)))))
                 .addContainerGap(85, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
@@ -173,11 +191,15 @@ public class TelaCadastroFunc extends javax.swing.JFrame {
                 .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(31, 31, 31)
+                .addGap(21, 21, 21)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel8)
+                    .addComponent(txtNome, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(user, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel5))
-                .addGap(27, 27, 27)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel6)
                     .addComponent(senha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -202,11 +224,11 @@ public class TelaCadastroFunc extends javax.swing.JFrame {
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(21, 21, 21)
                 .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(12, Short.MAX_VALUE))
+            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -235,13 +257,44 @@ public class TelaCadastroFunc extends javax.swing.JFrame {
     private void btnCadastrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCadastrarActionPerformed
         // TODO add your handling code here ermissaoInserida = permissao.getName();
 
+        String nomeInformado = txtNome.getText();
         String userInformado = user.getText();
         String senhaInformada = senha.getText();
         Integer permissaoRecebida = permissaoInserida + 1;
-        if (senha.isValid() && user.isValid()) { //Precisa ser feito, pois não há como verificar no Controller
+        if (senha.isValid() && user.isValid() && txtNome.isValid()) { //Precisa ser feito, pois não há como verificar no Controller
             try {
                 int resolucao = CadastroImplementacao.efetuarCadastro(userInformado, senhaInformada, permissaoRecebida);
+                
                 if (resolucao == 1) {
+                    
+                    switch(permissaoRecebida){
+                        case 1:
+                            AdminImplementacao.salvarAdm(nomeInformado);
+                        break;
+                            
+                        case 2:
+                            DentistaImplementacao.salvarDentista(nomeInformado);
+                        break;
+                        
+                        case 3:
+                            boolean exito = GerenteImplementacao.salvarNome(nomeInformado);
+                            if(exito){
+                               System.out.print("bom");
+                                   
+                            }else{
+                                 System.out.print("bom");
+                            }
+                        break;
+                        
+                        case 4:
+                            RecepcionistaImplementacao.salvarNome(nomeInformado);
+                        break;
+                        
+                        default:
+                            //L
+                            break;
+                    };
+                    
                     JOptionPane.showMessageDialog(null, "Usuário cadastrado com sucesso!");
                 } else {
                     if (resolucao == 2) {
@@ -263,6 +316,10 @@ public class TelaCadastroFunc extends javax.swing.JFrame {
         permissaoInserida = permissao.getSelectedIndex();
         System.out.print("\npermissaoPura:" + permissaoInserida);
     }//GEN-LAST:event_permissaoActionPerformed
+
+    private void txtNomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNomeActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtNomeActionPerformed
 
     /**
      * @param args the command line arguments
@@ -309,11 +366,13 @@ public class TelaCadastroFunc extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JComboBox<String> permissao;
     private javax.swing.JPasswordField senha;
+    private javax.swing.JTextField txtNome;
     private javax.swing.JTextField user;
     // End of variables declaration//GEN-END:variables
 }

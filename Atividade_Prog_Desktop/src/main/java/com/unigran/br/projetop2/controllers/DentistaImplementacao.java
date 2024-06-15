@@ -7,11 +7,10 @@ import java.util.List;
 
 public class DentistaImplementacao {
 
-    public static boolean salvarDentista(String nome, String cro) throws Exception {
-        if (nome != null && !nome.isEmpty() && cro != null && !cro.isEmpty()) {
+    public static boolean salvarDentista(String nome) throws Exception {
+        if (nome != null && !nome.isEmpty()) {
             Dentista dentista = new Dentista();
             dentista.setNome(nome);
-            dentista.setCro(cro);
 
             DentistaDao dentistaDao = new DentistaDao();
             dentistaDao.salvar(dentista);

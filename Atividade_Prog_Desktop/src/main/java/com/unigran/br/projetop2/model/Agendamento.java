@@ -25,6 +25,12 @@ public class Agendamento implements Serializable {
     @Column(length = 500)
     private String observacao;
 
+    @Column(length = 500)
+    private String NomePaciente;
+
+    @Column(length = 500)
+    private String NomeDentista;
+
     @Column
     private Integer status;
 
@@ -33,6 +39,22 @@ public class Agendamento implements Serializable {
 
     @Column(name = "horario")
     private LocalTime horario;
+
+    public String getNomePaciente() {
+        return NomePaciente;
+    }
+
+    public void setNomePaciente(String nomePaciente) {
+        NomePaciente = nomePaciente;
+    }
+
+    public String getNomeDentista() {
+        return NomeDentista;
+    }
+
+    public void setNomeDentista(String nomeDentista) {
+        NomeDentista = nomeDentista;
+    }
 
     //private File anexos;  //Observar
     public Integer getStatus() {

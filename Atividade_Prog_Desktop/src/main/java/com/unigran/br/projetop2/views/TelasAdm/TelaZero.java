@@ -5,7 +5,8 @@
 package com.unigran.br.projetop2.views.TelasAdm;
 
 import com.unigran.br.projetop2.controllers.CadastroImplementacao;
-import com.unigran.br.projetop2.views.TelaLogin.TelaLogin;
+import com.unigran.br.projetop2.views.TelasLogin.TelaLogin;
+
 import javax.swing.JOptionPane;
 
 /**

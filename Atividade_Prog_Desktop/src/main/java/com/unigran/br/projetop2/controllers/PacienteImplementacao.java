@@ -42,7 +42,7 @@ public class PacienteImplementacao {   //Terá as funções que serão chamadas 
         buscarPacienteInformado(nomeInformado);
     }
 
-    public static boolean inserirPaciente(String nome, String cpf, Date dataNasc, String endereco, String convenios, String email, String responsavel) throws Exception {
+    public static boolean inserirPaciente(String nome, String cpf, Date dataNasc, String endereco, String convenios, String email, String responsavel,String Telefone) throws Exception {
 
         if (isValid(nome) && isValid(cpf) && dataNasc != null && isValid(endereco) && isValid(email) && isValid(responsavel)) {
             Paciente paciente = new Paciente();
