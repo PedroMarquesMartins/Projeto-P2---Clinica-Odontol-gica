@@ -5,6 +5,7 @@ import javax.persistence.*;
 
 @Entity
 public class Admin implements Serializable {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;

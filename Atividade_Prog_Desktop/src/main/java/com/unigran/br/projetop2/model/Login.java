@@ -5,6 +5,7 @@ import java.io.Serializable;
 
 @Entity
 public class Login implements Serializable {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
@@ -17,7 +18,6 @@ public class Login implements Serializable {
 
     @Column
     private Integer permissao;
-
 
     public Integer getPermissao() {
         return permissao;

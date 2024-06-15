@@ -34,7 +34,7 @@ public class AgendamentoDao implements Dao {
         dados.salvar(o);
     }
 
-    public void salvarStatus(Integer id,Integer status){
+    public void salvarStatus(Integer id, Integer status) {
         em.getTransaction().begin();
         em.createQuery("UPDATE Agendamento a SET a.status = :status WHERE a.id = :id")
                 .setParameter("status", status)

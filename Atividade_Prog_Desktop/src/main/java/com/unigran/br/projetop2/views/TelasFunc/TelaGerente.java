@@ -2,8 +2,10 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package com.unigran.br.projetop2.views.TelasAdm;
+package com.unigran.br.projetop2.views.TelasFunc;
 
+import com.unigran.br.projetop2.views.TelasAdm.*;
+import com.unigran.br.projetop2.controllers.CadastroImplementacao;
 import com.unigran.br.projetop2.views.Materiais.TelaGerenciarMateriais;
 import com.unigran.br.projetop2.views.TelasConsulta.TelaAgendamento;
 import com.unigran.br.projetop2.views.TelasPacientes.TelaGerenciarPacientes;
@@ -12,12 +14,12 @@ import com.unigran.br.projetop2.views.TelasPacientes.TelaGerenciarPacientes;
  *
  * @author Pedro
  */
-public class TelaAdministrador extends javax.swing.JFrame {
+public class TelaGerente extends javax.swing.JFrame {
 
     /**
      * Creates new form TelaAdministrador
      */
-    public TelaAdministrador() {
+    public TelaGerente() {
         initComponents();
         pack();
     }
@@ -34,10 +36,7 @@ public class TelaAdministrador extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        btnCadastrarFunc = new javax.swing.JButton();
-        btnGerPacientes = new javax.swing.JButton();
         btnGerMateriais = new javax.swing.JButton();
-        btnGerConsultas = new javax.swing.JButton();
         btnSair = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
@@ -55,36 +54,11 @@ public class TelaAdministrador extends javax.swing.JFrame {
         jLabel1.setForeground(new java.awt.Color(0, 0, 0));
         jLabel1.setText("Clinica Esteves");
 
-        btnCadastrarFunc.setFont(new java.awt.Font("Segoe UI", 0, 10)); // NOI18N
-        btnCadastrarFunc.setForeground(new java.awt.Color(0, 0, 0));
-        btnCadastrarFunc.setText("Cadastrar Funcionarios");
-        btnCadastrarFunc.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnCadastrarFuncActionPerformed(evt);
-            }
-        });
-
-        btnGerPacientes.setFont(new java.awt.Font("Segoe UI", 0, 10)); // NOI18N
-        btnGerPacientes.setText("Gerenciar Pacientes");
-        btnGerPacientes.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnGerPacientesActionPerformed(evt);
-            }
-        });
-
         btnGerMateriais.setFont(new java.awt.Font("Segoe UI", 0, 10)); // NOI18N
         btnGerMateriais.setText("Gerenciar Materiais");
         btnGerMateriais.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnGerMateriaisActionPerformed(evt);
-            }
-        });
-
-        btnGerConsultas.setFont(new java.awt.Font("Segoe UI", 0, 10)); // NOI18N
-        btnGerConsultas.setText("Gerenciar Consultas");
-        btnGerConsultas.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnGerConsultasActionPerformed(evt);
             }
         });
 
@@ -100,46 +74,33 @@ public class TelaAdministrador extends javax.swing.JFrame {
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(14, 14, 14)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(14, 14, 14)
-                        .addComponent(jLabel1))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(32, 32, 32)
-                        .addComponent(btnSair)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(btnGerMateriais, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel1))
+                .addGap(38, 38, 38))
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btnGerConsultas, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnCadastrarFunc, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnGerPacientes, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnGerMateriais, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(46, 46, 46))
+                .addGap(33, 33, 33)
+                .addComponent(btnSair)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(38, 38, 38)
                 .addComponent(jLabel1)
-                .addGap(54, 54, 54)
-                .addComponent(btnCadastrarFunc)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(btnGerPacientes)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(26, 26, 26)
                 .addComponent(btnGerMateriais)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(btnGerConsultas)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(btnSair)
-                .addContainerGap())
+                .addGap(16, 16, 16))
         );
 
         jPanel3.setBackground(new java.awt.Color(255, 255, 255));
 
         jLabel2.setBackground(new java.awt.Color(0, 0, 0));
         jLabel2.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel2.setText("Olá, Administrador");
+        jLabel2.setText("Olá, Gerente");
 
         jLabel3.setText("O que temos para hoje?");
 
@@ -152,7 +113,7 @@ public class TelaAdministrador extends javax.swing.JFrame {
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel3)
                     .addComponent(jLabel2))
-                .addContainerGap(322, Short.MAX_VALUE))
+                .addContainerGap(328, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -160,8 +121,8 @@ public class TelaAdministrador extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(jLabel2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel3)
-                .addContainerGap(245, Short.MAX_VALUE))
+                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(288, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -172,7 +133,7 @@ public class TelaAdministrador extends javax.swing.JFrame {
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(7, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -180,7 +141,7 @@ public class TelaAdministrador extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(15, 15, 15)
                 .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(24, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -197,29 +158,15 @@ public class TelaAdministrador extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnGerPacientesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGerPacientesActionPerformed
-        // TODO add your handling code here:
-        new TelaGerenciarPacientes().setVisible(true);
-    }//GEN-LAST:event_btnGerPacientesActionPerformed
-
     private void btnSairActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSairActionPerformed
         // TODO add your handling code here:
         dispose();
     }//GEN-LAST:event_btnSairActionPerformed
 
-    private void btnCadastrarFuncActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCadastrarFuncActionPerformed
-        new TelaCadastroFunc().setVisible(true);
-    }//GEN-LAST:event_btnCadastrarFuncActionPerformed
-
     private void btnGerMateriaisActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGerMateriaisActionPerformed
         // TODO add your handling code here:
         new TelaGerenciarMateriais().setVisible(true);
     }//GEN-LAST:event_btnGerMateriaisActionPerformed
-
-    private void btnGerConsultasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGerConsultasActionPerformed
-        // TODO add your handling code here:
-        new TelaAgendamento().setVisible(true);
-    }//GEN-LAST:event_btnGerConsultasActionPerformed
 
     /**
      * @param args the command line arguments
@@ -238,29 +185,29 @@ public class TelaAdministrador extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(TelaAdministrador.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaGerente.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(TelaAdministrador.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaGerente.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(TelaAdministrador.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaGerente.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(TelaAdministrador.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TelaGerente.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new TelaAdministrador().setVisible(true);
+                new TelaGerente().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnCadastrarFunc;
-    private javax.swing.JButton btnGerConsultas;
     private javax.swing.JButton btnGerMateriais;
-    private javax.swing.JButton btnGerPacientes;
     private javax.swing.JButton btnSair;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;

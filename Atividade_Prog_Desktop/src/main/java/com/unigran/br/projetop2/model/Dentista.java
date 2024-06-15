@@ -10,14 +10,11 @@ public class Dentista implements Serializable {
     @Column(length = 30)
     private String cro;  //Observar
 
-   @Column(length = 30)
+    @Column(length = 30)
     private String nome;
 
     //@OneToOne(cascade = CascadeType.ALL)  //Possivel problema futuro?
     //private Login login;
-
-
-
     public String getCro() {
         return cro;
     }
@@ -33,9 +30,6 @@ public class Dentista implements Serializable {
     public void setNome(String nome) {
         this.nome = nome;
     }
-
-
-
 
     /*public Login getLogin() {
         return login;

@@ -1,4 +1,5 @@
 package com.unigran.br.projetop2.model;
+
 import java.io.Serializable;
 import java.util.List;
 import javax.persistence.Entity;
@@ -7,7 +8,6 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
-
 
 @Entity
 public class Prontuario implements Serializable {

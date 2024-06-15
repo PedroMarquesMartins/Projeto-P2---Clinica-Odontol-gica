@@ -18,7 +18,7 @@ public class PacienteDao implements Dao {
 
     @Override
     public List getListaDados() {
-        return em.createNativeQuery("SELECT * FROM paciente p",Paciente.class)
+        return em.createNativeQuery("SELECT * FROM paciente p", Paciente.class)
                 .getResultList();
     }
 

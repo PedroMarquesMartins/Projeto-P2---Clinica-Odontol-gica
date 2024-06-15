@@ -11,7 +11,6 @@ import javax.persistence.ManyToOne;
 @Entity
 public class Prontuarios implements Serializable {
 
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -21,8 +20,6 @@ public class Prontuarios implements Serializable {
 
     //@ManyToOne
     //private Consulta consulta;
-
     //@Lob
     //private String descricao;
-
 }

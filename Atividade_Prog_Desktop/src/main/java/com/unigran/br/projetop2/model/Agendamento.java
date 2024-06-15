@@ -13,14 +13,12 @@ public class Agendamento implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-   //// @ManyToOne
-   // @JoinColumn(name = "paciente_id")
-   // private Paciente paciente;
-
-   // @ManyToOne
-   // @JoinColumn(name = "dentista_cro")
-   // private Dentista dentista;
-
+    //// @ManyToOne
+    // @JoinColumn(name = "paciente_id")
+    // private Paciente paciente;
+    // @ManyToOne
+    // @JoinColumn(name = "dentista_cro")
+    // private Dentista dentista;
     @Temporal(TemporalType.TIMESTAMP)
     private Date data;
 
@@ -28,7 +26,7 @@ public class Agendamento implements Serializable {
     private String observacao;
 
     @Column
-    private  Integer status;
+    private Integer status;
 
     @Column
     private double valor;
@@ -37,12 +35,9 @@ public class Agendamento implements Serializable {
     private LocalTime horario;
 
     //private File anexos;  //Observar
-
-
     public Integer getStatus() {
         return status;
     }
-
 
     public LocalTime getHorario() {
         return horario;

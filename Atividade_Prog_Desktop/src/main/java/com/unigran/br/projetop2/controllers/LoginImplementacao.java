@@ -3,6 +3,9 @@ package com.unigran.br.projetop2.controllers;
 import com.unigran.br.projetop2.Dao.LoginDao;
 import com.unigran.br.projetop2.model.Login;
 import com.unigran.br.projetop2.views.TelasAdm.TelaAdministrador;
+import com.unigran.br.projetop2.views.TelasFunc.TelaDentista;
+import com.unigran.br.projetop2.views.TelasFunc.TelaGerente;
+import com.unigran.br.projetop2.views.TelasFunc.TelaRecepcionista;
 
 import java.util.List;
 
@@ -14,11 +17,11 @@ public class LoginImplementacao {
             LoginDao LC = new LoginDao();
             List<Login> loginList = LC.getListaDados();
             for (Login loginL : loginList) {
-                System.out.println("User:"+user+"\nSenha:"+senha);
+                System.out.println("User:" + user + "\nSenha:" + senha);
                 if (user.equals(loginL.getLogin())) {
                     if (senha.equals(loginL.getSenha())) {
                         sucesso = true;
-                        System.err.print("Logado Com sucesso1");
+                        System.err.print("Logado Com sucesso");
                         //Qual o tipo de permissão/usuário?
 
                         //Para descobir... Que tal:
@@ -31,20 +34,23 @@ public class LoginImplementacao {
 
                         switch(permissao) {
                             case 1:
-                                System.out.print("ALOOOOOOOOOOOOOOO");
                                 new TelaAdministrador().setVisible(true);
                                 break;
 
                             case 2:
-                                // telaPrincipalPermissão2DentistaSeilakk(user).setVisible(true);
+                                new TelaDentista().setVisible(true);
                                 break;
 
                             case 3:
-                                //telaPrincipalGerentePermissão3...
+                                new TelaGerente().setVisible(true);
                                 break;
-
+                                
+                            case 4:
+                                new TelaRecepcionista().setVisible(true);
+                                break;
+                                
                             default:
-
+                                //N/A
                                 break;
                         }
                     }
@@ -61,7 +67,7 @@ public class LoginImplementacao {
             System.err.print("Usuario ou senha inválidos");
             return false;
         }else {
-            System.err.print("Logado Com sucesso2");
+            System.err.print("Logado Com sucesso");
             return true;
         }
     }

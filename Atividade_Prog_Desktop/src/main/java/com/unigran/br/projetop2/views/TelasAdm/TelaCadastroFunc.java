@@ -5,6 +5,8 @@
 package com.unigran.br.projetop2.views.TelasAdm;
 
 import com.unigran.br.projetop2.controllers.CadastroImplementacao;
+
+import javax.swing.*;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -13,13 +15,15 @@ import java.util.logging.Logger;
  * @author Pedro
  */
 public class TelaCadastroFunc extends javax.swing.JFrame {
+
     private Integer permissaoInserida;
+
     /**
      * Creates new form TelaCadastroFunc
      */
     public TelaCadastroFunc() {
         initComponents();
-         pack();
+        pack();
     }
 
     /**
@@ -47,11 +51,12 @@ public class TelaCadastroFunc extends javax.swing.JFrame {
         user = new javax.swing.JTextField();
         btnCadastrar = new javax.swing.JButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setResizable(false);
 
         jPanel1.setBackground(new java.awt.Color(255, 204, 204));
 
-        jPanel2.setBackground(new java.awt.Color(204, 51, 255));
+        jPanel2.setBackground(new java.awt.Color(255, 51, 204));
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(0, 0, 0));
@@ -116,7 +121,6 @@ public class TelaCadastroFunc extends javax.swing.JFrame {
         jLabel7.setText("Informe a area de atuação");
 
         permissao.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Administrador", "Dentista", "Gerente", "Recepcionista" }));
-        permissao.setSelectedIndex(3);
         permissao.setToolTipText("");
         permissao.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -195,7 +199,7 @@ public class TelaCadastroFunc extends javax.swing.JFrame {
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(16, Short.MAX_VALUE))
+                .addContainerGap(17, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -203,7 +207,7 @@ public class TelaCadastroFunc extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(21, 21, 21)
                 .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(19, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -231,24 +235,34 @@ public class TelaCadastroFunc extends javax.swing.JFrame {
 
     private void btnCadastrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCadastrarActionPerformed
         // TODO add your handling code here ermissaoInserida = permissao.getName();
+
         String userInformado = user.getText();
         String senhaInformada = senha.getText();
-        Integer permissaoRecebida = permissaoInserida+1;
-        //Integer permissaoConvertida=CadastroImplementacao.verificaPermissao(permissaoInserida);
-        //if(permissaoConvertida!=100){
-        try {
-            CadastroImplementacao.efetuarCadastro(userInformado,senhaInformada,permissaoRecebida);
-        } catch (Exception ex) {
-            Logger.getLogger(TelaCadastroFunc.class.getName()).log(Level.SEVERE, null, ex);
-        //}}else{
-            System.err
-                 .print("Catch-100");
+        Integer permissaoRecebida = permissaoInserida + 1;
+        if (senha.isValid() && user.isValid()) { //Precisa ser feito, pois não há como verificar no Controller
+            try {
+                int resolucao = CadastroImplementacao.efetuarCadastro(userInformado, senhaInformada, permissaoRecebida);
+                if (resolucao == 1) {
+                    JOptionPane.showMessageDialog(null, "Usuário cadastrado com sucesso!");
+                } else {
+                    if (resolucao == 2) {
+                        JOptionPane.showMessageDialog(null, "Dados insuficientes ou inválidos.");
+                    } else {
+                        JOptionPane.showMessageDialog(null, "Este usuário já está cadastrado no sistema.");
+                    }
+                }
+            } catch (Exception ex) {
+                Logger.getLogger(TelaCadastroFunc.class.getName()).log(Level.SEVERE, null, ex);
+                System.err.print("Catch-100");
+            }
+        } else {
+            JOptionPane.showMessageDialog(null, "Dados insuficientes ou inválidos.");
         }
     }//GEN-LAST:event_btnCadastrarActionPerformed
 
     private void permissaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_permissaoActionPerformed
-        permissaoInserida = permissao.getItemCount();
-        System.out.print("permissaoPura:"+permissaoInserida);
+        permissaoInserida = permissao.getSelectedIndex();
+        System.out.print("\npermissaoPura:" + permissaoInserida);
     }//GEN-LAST:event_permissaoActionPerformed
 
     /**
@@ -268,13 +282,13 @@ public class TelaCadastroFunc extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(TelaCadastroFunc.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            Logger.getLogger(TelaCadastroFunc.class.getName()).log(Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(TelaCadastroFunc.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            Logger.getLogger(TelaCadastroFunc.class.getName()).log(Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(TelaCadastroFunc.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            Logger.getLogger(TelaCadastroFunc.class.getName()).log(Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(TelaCadastroFunc.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            Logger.getLogger(TelaCadastroFunc.class.getName()).log(Level.SEVERE, null, ex);
         }
         //</editor-fold>
 

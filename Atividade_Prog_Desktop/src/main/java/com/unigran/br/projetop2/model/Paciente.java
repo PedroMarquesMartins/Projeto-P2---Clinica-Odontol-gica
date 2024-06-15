@@ -1,9 +1,7 @@
 package com.unigran.br.projetop2.model;
 
-import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Date;
-import java.util.List;
 import javax.persistence.Id;
 import javax.persistence.Temporal;
 import javax.persistence.Column;
@@ -13,7 +11,6 @@ import javax.persistence.GenerationType;
 
 @Entity
 public class Paciente implements Serializable {
-
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
