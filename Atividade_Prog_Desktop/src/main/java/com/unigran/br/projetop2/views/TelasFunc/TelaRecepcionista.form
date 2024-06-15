@@ -94,6 +94,7 @@
                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
                           <Component id="btnGerenciarPacientes" max="32767" attributes="0"/>
                           <Component id="btnGerAgendamentos" max="32767" attributes="0"/>
+                          <Component id="btnGerarRelatorio" alignment="0" pref="0" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace min="0" pref="7" max="32767" attributes="0"/>
                   </Group>
@@ -108,6 +109,8 @@
                       <Component id="btnGerenciarPacientes" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="btnGerAgendamentos" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="btnGerarRelatorio" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="32767" attributes="0"/>
                       <Component id="btnSair" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
@@ -157,6 +160,14 @@
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnGerAgendamentosActionPerformed"/>
               </Events>
             </Component>
+            <Component class="javax.swing.JToggleButton" name="btnGerarRelatorio">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Relat&#xf3;rio Pacientes"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnGerarRelatorioActionPerformed"/>
+              </Events>
+            </Component>
           </SubComponents>
         </Container>
         <Container class="javax.swing.JPanel" name="jPanel3">
@@ -200,7 +211,7 @@
                 <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="0" green="0" red="0" type="rgb"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="Ol&#xe1;, Gerente"/>
+                <Property name="text" type="java.lang.String" value="Ol&#xe1;, Recepcionista"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="jLabel3">

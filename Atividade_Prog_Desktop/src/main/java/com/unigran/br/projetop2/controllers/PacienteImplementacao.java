@@ -54,6 +54,7 @@ public class PacienteImplementacao {   //Terá as funções que serão chamadas 
             paciente.setConvenios(convenios);
             paciente.setEmail(email);
             paciente.setResponsavel(responsavel);
+            paciente.setTelefone(Telefone);
 
             PacienteDao pacienteController = new PacienteDao();
             pacienteController.salvar(paciente);

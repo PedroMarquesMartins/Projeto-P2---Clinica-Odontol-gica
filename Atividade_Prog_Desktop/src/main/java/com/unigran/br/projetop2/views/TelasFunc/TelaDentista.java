@@ -4,9 +4,26 @@
  */
 package com.unigran.br.projetop2.views.TelasFunc;
 
+import com.unigran.br.projetop2.Dao.PacienteDao;
+import com.unigran.br.projetop2.controllers.CadastroImplementacao;
+import com.unigran.br.projetop2.controllers.PacienteImplementacao;
+import com.unigran.br.projetop2.model.Paciente;
+import com.unigran.br.projetop2.views.Materiais.TelaGerenciarMateriais;
+import com.unigran.br.projetop2.views.TelasConsulta.TelaAgendamento;
+import com.unigran.br.projetop2.views.TelasPacientes.TelaGerenciarPacientes;
+import net.sf.jasperreports.engine.*;
+import net.sf.jasperreports.engine.data.JRMapCollectionDataSource;
+import net.sf.jasperreports.engine.util.JRLoader;
+import net.sf.jasperreports.view.JasperViewer;
 import com.unigran.br.projetop2.views.TelasConsulta.TelaAgendamento;
 import com.unigran.br.projetop2.views.TelasPacientes.TelaCadastrarPacientes;
 import com.unigran.br.projetop2.views.TelasPacientes.TelaGerenciarPacientes;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -38,6 +55,7 @@ public class TelaDentista extends javax.swing.JFrame {
         btnSair = new javax.swing.JButton();
         btnCadastrarPacientes = new javax.swing.JButton();
         btnGerenciarPacientes = new javax.swing.JButton();
+        btnGerarRelatorio = new javax.swing.JToggleButton();
         jPanel3 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
@@ -85,6 +103,13 @@ public class TelaDentista extends javax.swing.JFrame {
             }
         });
 
+        btnGerarRelatorio.setText("Relatório Pacientes");
+        btnGerarRelatorio.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnGerarRelatorioActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
@@ -98,10 +123,13 @@ public class TelaDentista extends javax.swing.JFrame {
                         .addGap(14, 14, 14)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(btnGerConsultas, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel1)
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addComponent(jLabel1)
+                                .addGap(0, 0, Short.MAX_VALUE))
                             .addComponent(btnCadastrarPacientes, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(btnGerenciarPacientes, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-                .addGap(38, 38, 38))
+                            .addComponent(btnGerenciarPacientes, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(btnGerarRelatorio, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                .addGap(24, 24, 24))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -114,6 +142,8 @@ public class TelaDentista extends javax.swing.JFrame {
                 .addComponent(btnCadastrarPacientes)
                 .addGap(12, 12, 12)
                 .addComponent(btnGerenciarPacientes)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(btnGerarRelatorio)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(btnSair)
                 .addContainerGap())
@@ -200,6 +230,39 @@ public class TelaDentista extends javax.swing.JFrame {
         new TelaGerenciarPacientes().setVisible(true);
     }//GEN-LAST:event_btnGerenciarPacientesActionPerformed
 
+    private void btnGerarRelatorioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGerarRelatorioActionPerformed
+        // TODO add your handling code here:
+        try{
+        Map<String, Object> parameters = new HashMap<>();
+        parameters.put("title", "Relatorio Pacientes");
+
+        Collection<Map<String, ?>> data = new ArrayList<>();
+        for (Paciente pacienteL : PacienteImplementacao.listarPacientes()) {
+            Map<String, Object> item = new HashMap<>();
+
+            item.put("id",Integer.parseInt(String.valueOf(pacienteL.getId())));
+            item.put("nome",pacienteL.getNome());
+            item.put("cpf",pacienteL.getNome());
+            //item.put("data_nasc",pacienteL.getDataNascimento());
+            item.put("email",pacienteL.getEmail());
+            item.put("convenio",pacienteL.getConvenios());
+            item.put("endereco",pacienteL.getEndereco());
+            data.add(item);
+        }
+
+        Collection<Map<String, ?>> dataS = data;
+        JRDataSource dataSource = new JRMapCollectionDataSource(dataS);
+        JasperReport jr = (JasperReport) JRLoader.loadObject(getClass().getResource("/relatorios/relatorio.jasper"));
+        JasperPrint jasperPrint = JasperFillManager.fillReport(jr, parameters, dataSource);
+
+        JasperViewer jv = new JasperViewer(jasperPrint, false);
+        jv.setVisible(true);
+
+    }catch (JRException e){
+        Logger.getLogger(TelaDentista.class.getName()).log(Level.SEVERE, null, e);
+    }
+    }//GEN-LAST:event_btnGerarRelatorioActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -241,6 +304,7 @@ public class TelaDentista extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnCadastrarPacientes;
     private javax.swing.JButton btnGerConsultas;
+    private javax.swing.JToggleButton btnGerarRelatorio;
     private javax.swing.JButton btnGerenciarPacientes;
     private javax.swing.JButton btnSair;
     private javax.swing.JLabel jLabel1;
