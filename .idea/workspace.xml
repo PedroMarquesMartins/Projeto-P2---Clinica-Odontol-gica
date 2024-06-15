@@ -4,29 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d57cb34f-587f-4fb4-a0cb-bd35152aeae8" name="Changes" comment="Implementacão e adição de pessoas Reais v0.9.3&#10;&#10;Made by Joao Pedro Marques Martins">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Atividade_Prog_Desktop/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Atividade_Prog_Desktop/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Atividade_Prog_Desktop/src/main/java/com/unigran/br/projetop2/controllers/LoginImplementacao.java" beforeDir="false" afterPath="$PROJECT_DIR$/Atividade_Prog_Desktop/src/main/java/com/unigran/br/projetop2/controllers/LoginImplementacao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Atividade_Prog_Desktop/src/main/java/com/unigran/br/projetop2/controllers/PacienteImplementacao.java" beforeDir="false" afterPath="$PROJECT_DIR$/Atividade_Prog_Desktop/src/main/java/com/unigran/br/projetop2/controllers/PacienteImplementacao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Atividade_Prog_Desktop/src/main/java/com/unigran/br/projetop2/views/TelasAdm/TelaAdministrador.form" beforeDir="false" afterPath="$PROJECT_DIR$/Atividade_Prog_Desktop/src/main/java/com/unigran/br/projetop2/views/TelasAdm/TelaAdministrador.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Atividade_Prog_Desktop/src/main/java/com/unigran/br/projetop2/views/TelasAdm/TelaAdministrador.java" beforeDir="false" afterPath="$PROJECT_DIR$/Atividade_Prog_Desktop/src/main/java/com/unigran/br/projetop2/views/TelasAdm/TelaAdministrador.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Atividade_Prog_Desktop/src/main/java/com/unigran/br/projetop2/views/TelasFunc/TelaDentista.form" beforeDir="false" afterPath="$PROJECT_DIR$/Atividade_Prog_Desktop/src/main/java/com/unigran/br/projetop2/views/TelasFunc/TelaDentista.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Atividade_Prog_Desktop/src/main/java/com/unigran/br/projetop2/views/TelasFunc/TelaDentista.java" beforeDir="false" afterPath="$PROJECT_DIR$/Atividade_Prog_Desktop/src/main/java/com/unigran/br/projetop2/views/TelasFunc/TelaDentista.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Atividade_Prog_Desktop/src/main/java/com/unigran/br/projetop2/views/TelasFunc/TelaGerente.form" beforeDir="false" afterPath="$PROJECT_DIR$/Atividade_Prog_Desktop/src/main/java/com/unigran/br/projetop2/views/TelasFunc/TelaGerente.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Atividade_Prog_Desktop/src/main/java/com/unigran/br/projetop2/views/TelasFunc/TelaGerente.java" beforeDir="false" afterPath="$PROJECT_DIR$/Atividade_Prog_Desktop/src/main/java/com/unigran/br/projetop2/views/TelasFunc/TelaGerente.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Atividade_Prog_Desktop/src/main/java/com/unigran/br/projetop2/views/TelasFunc/TelaRecepcionista.form" beforeDir="false" afterPath="$PROJECT_DIR$/Atividade_Prog_Desktop/src/main/java/com/unigran/br/projetop2/views/TelasFunc/TelaRecepcionista.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Atividade_Prog_Desktop/src/main/java/com/unigran/br/projetop2/views/TelasFunc/TelaRecepcionista.java" beforeDir="false" afterPath="$PROJECT_DIR$/Atividade_Prog_Desktop/src/main/java/com/unigran/br/projetop2/views/TelasFunc/TelaRecepcionista.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Atividade_Prog_Desktop/target/generated-sources/annotations/com/unigran/br/projetop2/model/Agendamento_.java" beforeDir="false" afterPath="$PROJECT_DIR$/Atividade_Prog_Desktop/target/generated-sources/annotations/com/unigran/br/projetop2/model/Agendamento_.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Atividade_Prog_Desktop/target/generated-sources/annotations/com/unigran/br/projetop2/model/Dentista_.java" beforeDir="false" afterPath="$PROJECT_DIR$/Atividade_Prog_Desktop/target/generated-sources/annotations/com/unigran/br/projetop2/model/Dentista_.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Atividade_Prog_Desktop/target/generated-sources/annotations/com/unigran/br/projetop2/model/Gerente_.java" beforeDir="false" afterPath="$PROJECT_DIR$/Atividade_Prog_Desktop/target/generated-sources/annotations/com/unigran/br/projetop2/model/Gerente_.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Atividade_Prog_Desktop/target/generated-sources/annotations/com/unigran/br/projetop2/model/Login_.java" beforeDir="false" afterPath="$PROJECT_DIR$/Atividade_Prog_Desktop/target/generated-sources/annotations/com/unigran/br/projetop2/model/Login_.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Atividade_Prog_Desktop/target/generated-sources/annotations/com/unigran/br/projetop2/model/Material_.java" beforeDir="false" afterPath="$PROJECT_DIR$/Atividade_Prog_Desktop/target/generated-sources/annotations/com/unigran/br/projetop2/model/Material_.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Atividade_Prog_Desktop/target/generated-sources/annotations/com/unigran/br/projetop2/model/Paciente_.java" beforeDir="false" afterPath="$PROJECT_DIR$/Atividade_Prog_Desktop/target/generated-sources/annotations/com/unigran/br/projetop2/model/Paciente_.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Atividade_Prog_Desktop/target/generated-sources/annotations/com/unigran/br/projetop2/model/Prontuario_.java" beforeDir="false" afterPath="$PROJECT_DIR$/Atividade_Prog_Desktop/target/generated-sources/annotations/com/unigran/br/projetop2/model/Prontuario_.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Atividade_Prog_Desktop/target/generated-sources/annotations/com/unigran/br/projetop2/model/Prontuarios_.java" beforeDir="false" afterPath="$PROJECT_DIR$/Atividade_Prog_Desktop/target/generated-sources/annotations/com/unigran/br/projetop2/model/Prontuarios_.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Atividade_Prog_Desktop/target/generated-sources/annotations/com/unigran/br/projetop2/model/Recepcionista_.java" beforeDir="false" afterPath="$PROJECT_DIR$/Atividade_Prog_Desktop/target/generated-sources/annotations/com/unigran/br/projetop2/model/Recepcionista_.java" afterDir="false" />
-    </list>
+    <list default="true" id="d57cb34f-587f-4fb4-a0cb-bd35152aeae8" name="Changes" comment="Relatórios Branch&#10; &#10; Software na Versão v1.0&#10;&#10;Made by Joao Pedro Marques Martins" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -48,7 +26,7 @@
     </option>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="Modificacoes-Joao-Pedro-Marques-v0.9.3" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -82,21 +60,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;UI_DESIGNER_EDITOR_MODE.PaletteManager.WIDTH&quot;: &quot;523&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;Modificacoes-Joao-Pedro-Marques-v0.9.3&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Pedro/Desktop&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.importing&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "UI_DESIGNER_EDITOR_MODE.PaletteManager.WIDTH": "523",
+    "git-widget-placeholder": "Relatorio-João-Pedro-Marques-v1.0",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "C:/Users/Pedro/Desktop",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "reference.settings.project.maven.importing"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Pedro\Desktop\Projeto-P2-ClinicaOdontologica\Atividade_Prog_Desktop\src\main\java\com\unigran\br\projetop2\views" />
@@ -210,7 +188,15 @@
       <option name="project" value="LOCAL" />
       <updated>1718440657209</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Relatórios Branch&#10; &#10; Software na Versão v1.0&#10;&#10;Made by Joao Pedro Marques Martins">
+      <option name="closed" value="true" />
+      <created>1718492756757</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1718492756757</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -236,7 +222,8 @@
     <MESSAGE value="Aprimoramento das associações entre as entidades presentes no projeto. Correções e novas adaptações no projeto.&#10;&#10;Desenvolvimento baseado no Diagrama de Classe fornecido.&#10;&#10;Made by Joao Pedro Marques Martins" />
     <MESSAGE value="Main e Detalhes&#10;&#10;Made by Joao Pedro Marques Martins" />
     <MESSAGE value="Implementacão e adição de pessoas Reais v0.9.3&#10;&#10;Made by Joao Pedro Marques Martins" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implementacão e adição de pessoas Reais v0.9.3&#10;&#10;Made by Joao Pedro Marques Martins" />
+    <MESSAGE value="Relatórios Branch&#10; &#10; Software na Versão v1.0&#10;&#10;Made by Joao Pedro Marques Martins" />
+    <option name="LAST_COMMIT_MESSAGE" value="Relatórios Branch&#10; &#10; Software na Versão v1.0&#10;&#10;Made by Joao Pedro Marques Martins" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
