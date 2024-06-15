@@ -5,6 +5,7 @@ import com.unigran.br.projetop2.model.Login;
 import java.util.List;
 
 public class LoginDao implements Dao {
+
     @Override
     public String[] getTitulosColunas() {
         return new String[0];

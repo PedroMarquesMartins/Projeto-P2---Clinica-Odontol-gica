@@ -1,46 +1,24 @@
 package com.unigran.br.projetop2.model;
 
-import lombok.Getter;
-import lombok.Setter;
-
 import javax.persistence.*;
+import java.io.File;
 import java.io.Serializable;
 import java.time.LocalTime;
 import java.util.Date;
 
-@Getter
-@Setter
 @Entity
 public class Agendamento implements Serializable {
-
-    //Associações
-
-    @ManyToOne
-    @JoinColumn(name = "admin_id", referencedColumnName = "id")
-    private Admin admin;
-
-    @ManyToOne
-    @JoinColumn(name = "recepcionista_id", referencedColumnName = "id")
-    private Recepcionista recepcionista;
-
-    @ManyToOne
-    @JoinColumn(name = "gerente_id", referencedColumnName = "id")
-    private Gerente gerente;
-
-    @ManyToOne
-    @JoinColumn(name = "paciente_id", referencedColumnName = "id")
-    private Paciente paciente;
-
-    @ManyToOne
-    @JoinColumn(name = "dentista_cro", referencedColumnName = "cro")
-    private Dentista dentista;
-
-    //Atributos
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
+    //// @ManyToOne
+    // @JoinColumn(name = "paciente_id")
+    // private Paciente paciente;
+    // @ManyToOne
+    // @JoinColumn(name = "dentista_cro")
+    // private Dentista dentista;
     @Temporal(TemporalType.TIMESTAMP)
     private Date data;
 
@@ -48,7 +26,7 @@ public class Agendamento implements Serializable {
     private String observacao;
 
     @Column
-    private  Integer status;
+    private Integer status;
 
     @Column
     private double valor;
@@ -57,5 +35,51 @@ public class Agendamento implements Serializable {
     private LocalTime horario;
 
     //private File anexos;  //Observar
+    public Integer getStatus() {
+        return status;
+    }
 
+    public LocalTime getHorario() {
+        return horario;
+    }
+
+    public void setHorario(LocalTime horario) {
+        this.horario = horario;
+    }
+
+    public void setStatus(Integer status) {
+        this.status = status;
+    }
+
+    public double getValor() {
+        return valor;
+    }
+
+    public void setValor(double valor) {
+        this.valor = valor;
+    }
+
+    public String getObservacao() {
+        return observacao;
+    }
+
+    public void setObservacao(String observacao) {
+        this.observacao = observacao;
+    }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public Date getData() {
+        return data;
+    }
+
+    public void setData(Date data) {
+        this.data = data;
+    }
 }
