@@ -6,20 +6,21 @@ import javax.persistence.EntityTransaction;
 import javax.persistence.Persistence;
 import java.util.List;
 
-public class Dados{
-    EntityManagerFactory emf=
-            Persistence.
-                    createEntityManagerFactory("br.unigran_Atividade_Prog_Desktop_jar_1.0-SNAPSHOTPU");
-    EntityManager em =emf.createEntityManager();
+public class Dados {
+
+    EntityManagerFactory emf
+            = Persistence.
+            createEntityManagerFactory("br.unigran_Atividade_Prog_Desktop_jar_1.0-SNAPSHOTPU");
+    EntityManager em = emf.createEntityManager();
     EntityTransaction etx = em.getTransaction();
 
-    public void salvar(Object o){
+    public void salvar(Object o) {
         etx.begin();
         em.persist(o);
         etx.commit();
     }
 
-    public void atualiza(Object o){
+    public void atualiza(Object o) {
         etx.begin();
         em.merge(o);
         etx.commit();
@@ -35,11 +36,6 @@ public class Dados{
         }
         etx.commit();
     }
-
-
-
-
-
 
     //----Sla o que palito fez aqui honestamente-----------------------------------------------------------------
     public <T> T buscarPorId(Class<T> clazz, Object id) {

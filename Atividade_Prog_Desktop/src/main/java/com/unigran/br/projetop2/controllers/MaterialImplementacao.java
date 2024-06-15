@@ -3,71 +3,69 @@ package com.unigran.br.projetop2.controllers;
 import com.unigran.br.projetop2.Dao.MaterialDao;
 import com.unigran.br.projetop2.model.Material;
 
-
 import java.util.List;
 
-public class MaterialImplementacao{
-    public static void listarMateriais(){
-        MaterialDao MC = new MaterialDao();
-        MC.getListaDados();
+public class MaterialImplementacao {
+
+    public static List<Material> listarMateriais() {
+        MaterialDao materiaisDao = new MaterialDao();
+        return materiaisDao.getListaDados();
     }
 
-    public static boolean removerQntInformada(String nomeMaterial,Integer quantidadeRemover) throws Exception {
-        boolean sucesso=false;
+    public static boolean removerQntInformada(String nomeMaterial, Integer quantidadeRemover) throws Exception {
+        boolean sucesso = false;
         MaterialDao MC = new MaterialDao();
 
         List<Material> materialList = MC.getListaDados();
-        for (Material materialL : materialList)
-        {
-            if (nomeMaterial.equals(materialL.getNome())){
+        for (Material materialL : materialList) {
+            if (nomeMaterial.equals(materialL.getNome())) {
                 Integer qntMaterial = materialL.getQuantidade();
 
-                if(qntMaterial<quantidadeRemover){
+                if (qntMaterial < quantidadeRemover) {
                     System.err.print("Material insuficiente em estoque.");
-                    sucesso=false;
-                }else {
-                    materialL.setQuantidade(qntMaterial-quantidadeRemover);
+                    sucesso = false;
+                } else {
+                    materialL.setQuantidade(qntMaterial - quantidadeRemover);
 
-                    MC.salvarMaterialQnt(nomeMaterial,(qntMaterial-quantidadeRemover));
-                    sucesso=true;
+                    MC.salvarMaterialQnt(nomeMaterial, (qntMaterial - quantidadeRemover));
+                    sucesso = true;
                 }  //Diminuindo estoque
             }
         }
-        if (sucesso!=true){
+        if (sucesso != true) {
             System.err.print("Seu item não foi encontrado, ou não há suficiente.");
         }
         return sucesso;   //Retorna para a tela se deu certo
     }
 
-    public static boolean adicionarQntInformada(String nomeMaterial,Integer quantidadeAdicionar) throws Exception {
-        boolean sucesso=false;
+    public static boolean adicionarQntInformada(String nomeMaterial, Integer quantidadeAdicionar) throws Exception {
+        boolean sucesso = false;
         MaterialDao MC = new MaterialDao();
 
         List<Material> materialList = MC.getListaDados();
-        for (Material materialL : materialList)
-        {
-            if (nomeMaterial.equals(materialL.getNome())){
+        for (Material materialL : materialList) {
+            if (nomeMaterial.equals(materialL.getNome())) {
 
                 Integer qntMaterial = materialL.getQuantidade();
-                if(quantidadeAdicionar<1){
+                if (quantidadeAdicionar < 1) {
                     System.err.print("Você deve adicionar ao menos 1 item.");
-                    sucesso=false;
-                }else {
-                    materialL.setQuantidade(qntMaterial+quantidadeAdicionar);
+                    sucesso = false;
+                } else {
+                    materialL.setQuantidade(qntMaterial + quantidadeAdicionar);
 
-                    MC.salvarMaterialQnt(nomeMaterial,(qntMaterial+quantidadeAdicionar));
-                    sucesso=true;
+                    MC.salvarMaterialQnt(nomeMaterial, (qntMaterial + quantidadeAdicionar));
+                    sucesso = true;
                 }  //Aumentando estoque
             }
         }
-        if (sucesso!=true){
+        if (sucesso != true) {
             System.err.print("Seu item não foi encontrado!");
         }
         return sucesso;   //Retorna para a tela se deu certo
     }
 
     public static boolean efetuarCadastroMaterial(String nome, Integer quantEstoque, Integer quantMinima) throws Exception { //ATENÇÃO! Classe tela deve ter tratamento caso retorne false!
-        if (nome != null && !nome.isEmpty() && quantEstoque != null && quantMinima!=null && quantMinima>-1 && quantEstoque>-1) {
+        if (nome != null && !nome.isEmpty() && quantEstoque != null && quantMinima != null && quantMinima > -1 && quantEstoque > -1) {
             Material material = new Material();
 
             material.setNome(nome);
@@ -78,7 +76,7 @@ public class MaterialImplementacao{
             materialController.salvar(material);
 
             return true;   //Cadastrado com Sucesso (Mostrar tela)
-        }else {
+        } else {
             System.err.print("Dados insuficientes ou inválidos.");
             return false; //Deve aparecer um erro na Tela
         }

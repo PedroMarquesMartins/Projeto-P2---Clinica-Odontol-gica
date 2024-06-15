@@ -7,10 +7,11 @@ import javax.persistence.Persistence;
 import java.util.List;
 
 public interface Dao {
-    EntityManagerFactory emf=
-            Persistence.
-                    createEntityManagerFactory("br.unigran_Atividade_Prog_Desktop_jar_1.0-SNAPSHOTPU");
-    EntityManager em =emf.createEntityManager();
+
+    EntityManagerFactory emf
+            = Persistence.
+            createEntityManagerFactory("br.unigran_Atividade_Prog_Desktop_jar_1.0-SNAPSHOTPU");
+    EntityManager em = emf.createEntityManager();
     EntityTransaction etx = em.getTransaction();
 
     public String[] getTitulosColunas();//colunas matriz
