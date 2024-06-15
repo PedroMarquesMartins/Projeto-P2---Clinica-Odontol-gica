@@ -1,29 +1,48 @@
 package com.unigran.br.projetop2.model;
 
-import lombok.Getter;
-import lombok.Setter;
-
 import java.io.Serializable;
 import java.util.List;
-import javax.persistence.*;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 
-@Getter
-@Setter
 @Entity
 public class Prontuario implements Serializable {
 
-    //Associações
-
-    @OneToMany(mappedBy = "prontuario", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "prontuario")
     private List<Prontuarios> prontuarios;
-
-    @ManyToOne
-    @JoinColumn(name = "paciente_id", referencedColumnName = "id")
-    private Paciente paciente;
-
-    //Atributos
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
+    @ManyToOne
+    private Paciente paciente;
+
+    public List<Prontuarios> getProntuarios() {
+        return prontuarios;
+    }
+
+    public void setProntuarios(List<Prontuarios> prontuarios) {
+        this.prontuarios = prontuarios;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public Paciente getPaciente() {
+        return paciente;
+    }
+
+    public void setPaciente(Paciente paciente) {
+        this.paciente = paciente;
+    }
 }

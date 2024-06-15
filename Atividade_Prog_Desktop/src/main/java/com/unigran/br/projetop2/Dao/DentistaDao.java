@@ -6,6 +6,7 @@ import com.unigran.br.projetop2.model.Dentista;
 import java.util.List;
 
 public class DentistaDao implements Dao {
+
     @Override
     public String[] getTitulosColunas() {
         return new String[0];
