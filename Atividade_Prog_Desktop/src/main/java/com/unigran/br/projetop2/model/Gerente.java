@@ -13,8 +13,6 @@ public class Gerente implements Serializable {
     @Column(length = 30)
     private String nome;
 
-    @Column(length = 30)
-    private Login login;
 
     public Integer getId() {
         return id;
@@ -32,11 +30,4 @@ public class Gerente implements Serializable {
         this.nome = nome;
     }
 
-    public Login getLogin() {
-        return login;
-    }
-
-    public void setLogin(Login login) {
-        this.login = login;
-    }
 }

@@ -7,8 +7,11 @@
     <class>com.unigran.br.projetop2.model.Material</class>
     <class>com.unigran.br.projetop2.model.Agendamento</class>
     <class>com.unigran.br.projetop2.model.Dentista</class>
+    <class>com.unigran.br.projetop2.model.Recepcionista</class>
+    <class>com.unigran.br.projetop2.model.Gerente</class>
+    <class>com.unigran.br.projetop2.model.Administrador</class>
     <properties>
-      <property name="javax.persistence.jdbc.url" value="jdbc:postgresql://localhost:5432/postgres"/>
+      <property name="javax.persistence.jdbc.url" value="jdbc:postgresql://localhost:5432/NovoBanco"/>
       <property name="javax.persistence.jdbc.user" value="postgres"/>
       <property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver"/>
       <property name="javax.persistence.jdbc.password" value="unigran"/>

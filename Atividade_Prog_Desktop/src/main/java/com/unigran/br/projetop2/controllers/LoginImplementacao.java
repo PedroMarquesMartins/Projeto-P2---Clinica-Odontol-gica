@@ -10,7 +10,7 @@ import com.unigran.br.projetop2.views.TelasFunc.TelaRecepcionista;
 import java.util.List;
 
 public class LoginImplementacao {
-    public static boolean validaLogin(String user,String senha) {
+    public static boolean validaLogin(String user,String senha){
         boolean sucesso;
         sucesso = false;
         if (senha != null && !senha.isEmpty() && user != null && !user.isEmpty()) {

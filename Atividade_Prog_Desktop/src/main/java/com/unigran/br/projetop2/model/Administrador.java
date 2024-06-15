@@ -4,14 +4,16 @@ import java.io.Serializable;
 import javax.persistence.*;
 
 @Entity
-public class Admin implements Serializable {
+public class Administrador implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    @OneToOne
-    private Login login;
+    @Column(length = 150)
+    private String nome;
+    
+
 
     public Integer getId() {
         return id;
@@ -21,11 +23,15 @@ public class Admin implements Serializable {
         this.id = id;
     }
 
-    public Login getLogin() {
-        return login;
+  
+
+    public String getNome() {
+        return nome;
     }
 
-    public void setLogin(Login login) {
-        this.login = login;
+    public void setNome(String nome) {
+        this.nome = nome;
     }
+
+  
 }

@@ -13,8 +13,7 @@ public class Recepcionista implements Serializable {
     @Column(length = 30)
     private String nome;
 
-    @OneToOne(cascade = CascadeType.ALL)
-    private Login login;
+ 
 
     public Long getId() {
         return id;
@@ -32,11 +31,5 @@ public class Recepcionista implements Serializable {
         this.nome = nome;
     }
 
-    public Login getLogin() {
-        return login;
-    }
-
-    public void setLogin(Login login) {
-        this.login = login;
-    }
+   
 }

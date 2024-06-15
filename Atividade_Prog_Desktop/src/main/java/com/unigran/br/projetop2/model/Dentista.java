@@ -7,6 +7,7 @@ import java.io.Serializable;
 public class Dentista implements Serializable {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(length = 30)
     private String cro;  //Observar
 
