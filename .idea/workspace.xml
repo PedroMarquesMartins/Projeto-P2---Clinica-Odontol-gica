@@ -5,23 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d57cb34f-587f-4fb4-a0cb-bd35152aeae8" name="Changes" comment="Aprimoramento das associações entre as entidades presentes no projeto. Correções e novas adaptações no projeto.&#10;&#10;Desenvolvimento baseado no Diagrama de Classe fornecido.&#10;&#10;Made by Joao Pedro Marques Martins">
-      <change afterPath="$PROJECT_DIR$/Atividade_Prog_Desktop/src/main/java/com/unigran/br/projetop2/views/TelasAdm/TelaZero.form" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Atividade_Prog_Desktop/src/main/java/com/unigran/br/projetop2/views/TelasAdm/TelaZero.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Atividade_Prog_Desktop/src/main/java/com/unigran/br/projetop2/views/TelasConsulta/TelaAgendamento.form" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Atividade_Prog_Desktop/src/main/java/com/unigran/br/projetop2/views/TelasConsulta/TelaAgendamento.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Atividade_Prog_Desktop/src/main/java/com/unigran/br/projetop2/views/TelasConsulta/TelaMarcarConsulta.form" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Atividade_Prog_Desktop/src/main/java/com/unigran/br/projetop2/views/TelasConsulta/TelaMarcarConsulta.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Atividade_Prog_Desktop/src/main/java/com/unigran/br/projetop2/views/TelasPacientes/TelaCadastrarPacientes.form" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Atividade_Prog_Desktop/src/main/java/com/unigran/br/projetop2/views/TelasPacientes/TelaCadastrarPacientes.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Atividade_Prog_Desktop/src/main/java/com/unigran/br/projetop2/views/TelasPacientes/TelaGerenciarPacientes.form" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Atividade_Prog_Desktop/src/main/java/com/unigran/br/projetop2/views/TelasPacientes/TelaGerenciarPacientes.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Atividade_Prog_Desktop/src/main/java/com/unigran/br/projetop2/views/TelaLogin.form" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Atividade_Prog_Desktop/src/main/java/com/unigran/br/projetop2/views/TelaLogin.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Atividade_Prog_Desktop/src/main/java/com/unigran/br/projetop2/views/TelasAdm/TelaAdministrador.form" beforeDir="false" afterPath="$PROJECT_DIR$/Atividade_Prog_Desktop/src/main/java/com/unigran/br/projetop2/views/TelasAdm/TelaAdministrador.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Atividade_Prog_Desktop/src/main/java/com/unigran/br/projetop2/views/TelasAdm/TelaAdministrador.java" beforeDir="false" afterPath="$PROJECT_DIR$/Atividade_Prog_Desktop/src/main/java/com/unigran/br/projetop2/views/TelasAdm/TelaAdministrador.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Atividade_Prog_Desktop/src/main/java/com/unigran/br/projetop2/views/TelasAdm/TelaCadastroFunc.form" beforeDir="false" afterPath="$PROJECT_DIR$/Atividade_Prog_Desktop/src/main/java/com/unigran/br/projetop2/views/TelasAdm/TelaCadastroFunc.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Atividade_Prog_Desktop/src/main/java/com/unigran/br/projetop2/views/TelasAdm/TelaCadastroFunc.java" beforeDir="false" afterPath="$PROJECT_DIR$/Atividade_Prog_Desktop/src/main/java/com/unigran/br/projetop2/views/TelasAdm/TelaCadastroFunc.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,9 +68,9 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "UI_DESIGNER_EDITOR_MODE.PaletteManager.WIDTH": "523",
-    "git-widget-placeholder": "Novas-Telas-João-Pedro-Marques-v0.9",
+    "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/Users/Pedro/Desktop/Projeto-P2-ClinicaOdontologica/Atividade_Prog_Desktop/src/main/java/com/unigran/br/projetop2/views",
+    "last_opened_file_path": "C:/Users/Eduardo/Desktop/Faculdade/5° Semestre/André/Trabalho P2/Projeto-P2---Clinica-Odontol-gica",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0",
