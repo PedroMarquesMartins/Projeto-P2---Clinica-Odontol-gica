@@ -1,4 +1,8 @@
 # Projeto-P2---Clinica-Odontol-gica
+
+ATENÇÃO -> INSERIR O arquivo relatorio.jasper manualmente! O GitHub não está enviando.
+Caminho: "(...).getResource("/relatorios/relatorio.jasper")"
+
 Este repositório consta o software proveniente do projeto de uma clinica de odontologia, e está sendo desenvolvido por Eduardo Panage e João Pedro Marques.
 
 Participantes:
