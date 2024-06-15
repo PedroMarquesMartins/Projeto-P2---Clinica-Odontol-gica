@@ -1,50 +1,53 @@
 package com.unigran.br.projetop2.model;
 
-import lombok.Getter;
-import lombok.Setter;
-
 import javax.persistence.*;
 import java.io.Serializable;
-import java.util.List;
 
-@Getter
-@Setter
 @Entity
 public class Login implements Serializable {
-
-    // Associações
-
-    @OneToOne
-    @JoinColumn(name = "admin_id", referencedColumnName = "id")
-    private Admin admin;
-
-    @OneToOne
-    @JoinColumn(name = "recepcionista_id", referencedColumnName = "id")
-    private Recepcionista recepcionista;
-
-    @OneToOne
-    @JoinColumn(name = "gerente_id", referencedColumnName = "id")
-    private Gerente gerente;
-
-    @OneToOne
-    @JoinColumn(name = "dentista_id", referencedColumnName = "id")
-    private Dentista dentista;
-
-    @OneToMany(mappedBy = "login", cascade = CascadeType.ALL)
-    private List<Material> materiais;
-
-    // Atributos
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    @Column(length = 30, unique = true, nullable = false)
+    @Column(length = 30)
     private String login;
 
-    @Column(length = 30, nullable = false)
+    @Column(length = 30)
     private String senha;
 
-    @Column(nullable = false)
+    @Column
     private Integer permissao;
+
+    public Integer getPermissao() {
+        return permissao;
+    }
+
+    public void setPermissao(Integer permissao) {
+        this.permissao = permissao;
+    }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public String getLogin() {
+        return login;
+    }
+
+    public void setLogin(String login) {
+        this.login = login;
+    }
+
+    public String getSenha() {
+        return senha;
+    }
+
+    public void setSenha(String senha) {
+        this.senha = senha;
+    }
 }

@@ -3,7 +3,9 @@ package com.unigran.br.projetop2.Dao;
 import com.unigran.br.projetop2.model.Material;
 
 import java.util.List;
+
 public class MaterialDao implements Dao {
+
     @Override
     public String[] getTitulosColunas() {
         return new String[0];
@@ -38,7 +40,7 @@ public class MaterialDao implements Dao {
                 .getResultList();
     }
 
-    public void salvarMaterialQnt(String nomeMaterial, Integer qnt){
+    public void salvarMaterialQnt(String nomeMaterial, Integer qnt) {
         em.getTransaction().begin();
         em.createQuery("UPDATE Material m SET m.quantidade = :quantidade WHERE m.nome = :nome")
                 .setParameter("quantidade", qnt)
