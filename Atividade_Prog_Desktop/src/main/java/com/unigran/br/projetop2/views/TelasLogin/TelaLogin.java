@@ -2,18 +2,21 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package com.unigran.br.projetop2.views;
+package com.unigran.br.projetop2.views.TelasLogin;
 
 import com.unigran.br.projetop2.controllers.LoginImplementacao;
-import javax.swing.JOptionPane;
+
+import javax.swing.*;
 
 /**
  *
  * @author Pedro
  */
 public class TelaLogin extends javax.swing.JFrame {
+
     String senha;
     String user;
+
     /**
      * Creates new form TelaLogin
      */
@@ -38,9 +41,10 @@ public class TelaLogin extends javax.swing.JFrame {
         senhaInformada = new javax.swing.JPasswordField();
         btnLogin = new javax.swing.JButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setResizable(false);
 
-        jPanel1.setBackground(new java.awt.Color(255, 102, 255));
+        jPanel1.setBackground(new java.awt.Color(255, 51, 204));
         jPanel1.setPreferredSize(new java.awt.Dimension(1024, 720));
 
         usuarioInformado.addActionListener(new java.awt.event.ActionListener() {
@@ -93,7 +97,7 @@ public class TelaLogin extends javax.swing.JFrame {
                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                         .addComponent(usuarioInformado)
                         .addComponent(senhaInformada, javax.swing.GroupLayout.DEFAULT_SIZE, 116, Short.MAX_VALUE)))
-                .addContainerGap(135, Short.MAX_VALUE))
+                .addContainerGap(136, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -109,18 +113,18 @@ public class TelaLogin extends javax.swing.JFrame {
                     .addComponent(senhaInformada, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(38, 38, 38)
                 .addComponent(btnLogin)
-                .addContainerGap(81, Short.MAX_VALUE))
+                .addContainerGap(124, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 636, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 637, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 328, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 371, Short.MAX_VALUE)
         );
 
         pack();
@@ -132,24 +136,23 @@ public class TelaLogin extends javax.swing.JFrame {
 
     private void btnLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoginActionPerformed
         // TODO add your handling code here:
-        if(usuarioInformado.getText()!=null && !usuarioInformado.getText().isEmpty() && senhaInformada.getText()!=null && !senhaInformada.getText().isEmpty()){
-            
-        user = usuarioInformado.getText();
-        senha = senhaInformada.getText();
-        
-       boolean confirmacao= LoginImplementacao.validaLogin(user, senha);
-       if(confirmacao)
-       {
-        JOptionPane.showMessageDialog(null, "Logado com sucesso!");
-        dispose();   
-       }else{
-           JOptionPane.showMessageDialog(null, "Usuario ou senha não batem.");
+        if (usuarioInformado.getText() != null && !usuarioInformado.getText().isEmpty() && senhaInformada.getText() != null && !senhaInformada.getText().isEmpty()) {
+
+            user = usuarioInformado.getText();
+            senha = senhaInformada.getText();
+
+            boolean confirmacao = LoginImplementacao.validaLogin(user, senha);
+            if (confirmacao) {
+                JOptionPane.showMessageDialog(null, "Logado com sucesso!");
+                dispose();
+            } else {
+                JOptionPane.showMessageDialog(null, "Usuario ou senha não batem.");
             }
-        }else{
+        } else {
             JOptionPane.showMessageDialog(null, "Dados inválidos");
         }
     }//GEN-LAST:event_btnLoginActionPerformed
-    
+
     private void senhaInformadaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_senhaInformadaActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_senhaInformadaActionPerformed
