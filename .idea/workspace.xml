@@ -4,17 +4,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d57cb34f-587f-4fb4-a0cb-bd35152aeae8" name="Changes" comment="Criação e aprimoramento das associações entre as entidades presentes no projeto.&#10;&#10;Desenvolvimento baseado no Diagrama de Classe fornecido.&#10;&#10;Made by Eduardo Panage.">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="d57cb34f-587f-4fb4-a0cb-bd35152aeae8" name="Changes" comment="Aprimoramento das associações entre as entidades presentes no projeto. Correções e novas adaptações no projeto.&#10;&#10;Desenvolvimento baseado no Diagrama de Classe fornecido.&#10;&#10;Made by Joao Pedro Marques Martins">
+      <change afterPath="$PROJECT_DIR$/Atividade_Prog_Desktop/src/main/java/com/unigran/br/projetop2/views/TelasAdm/TelaZero.form" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Atividade_Prog_Desktop/src/main/java/com/unigran/br/projetop2/views/TelasAdm/TelaZero.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Atividade_Prog_Desktop/src/main/java/com/unigran/br/projetop2/views/TelasConsulta/TelaAgendamento.form" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Atividade_Prog_Desktop/src/main/java/com/unigran/br/projetop2/views/TelasConsulta/TelaAgendamento.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Atividade_Prog_Desktop/src/main/java/com/unigran/br/projetop2/views/TelasConsulta/TelaMarcarConsulta.form" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Atividade_Prog_Desktop/src/main/java/com/unigran/br/projetop2/views/TelasConsulta/TelaMarcarConsulta.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Atividade_Prog_Desktop/src/main/java/com/unigran/br/projetop2/views/TelasPacientes/TelaCadastrarPacientes.form" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Atividade_Prog_Desktop/src/main/java/com/unigran/br/projetop2/views/TelasPacientes/TelaCadastrarPacientes.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Atividade_Prog_Desktop/src/main/java/com/unigran/br/projetop2/views/TelasPacientes/TelaGerenciarPacientes.form" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Atividade_Prog_Desktop/src/main/java/com/unigran/br/projetop2/views/TelasPacientes/TelaGerenciarPacientes.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Atividade_Prog_Desktop/src/main/java/com/unigran/br/projetop2/Dao/AgendamentoDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/Atividade_Prog_Desktop/src/main/java/com/unigran/br/projetop2/Dao/AgendamentoDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Atividade_Prog_Desktop/src/main/java/com/unigran/br/projetop2/Dao/Dados.java" beforeDir="false" afterPath="$PROJECT_DIR$/Atividade_Prog_Desktop/src/main/java/com/unigran/br/projetop2/Dao/Dados.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Atividade_Prog_Desktop/src/main/java/com/unigran/br/projetop2/Dao/Dao.java" beforeDir="false" afterPath="$PROJECT_DIR$/Atividade_Prog_Desktop/src/main/java/com/unigran/br/projetop2/Dao/Dao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Atividade_Prog_Desktop/src/main/java/com/unigran/br/projetop2/Dao/DentistaDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/Atividade_Prog_Desktop/src/main/java/com/unigran/br/projetop2/Dao/DentistaDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Atividade_Prog_Desktop/src/main/java/com/unigran/br/projetop2/Dao/ProntuarioDao.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Atividade_Prog_Desktop/src/main/java/com/unigran/br/projetop2/controllers/LoginImplementacao.java" beforeDir="false" afterPath="$PROJECT_DIR$/Atividade_Prog_Desktop/src/main/java/com/unigran/br/projetop2/controllers/LoginImplementacao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Atividade_Prog_Desktop/src/main/java/com/unigran/br/projetop2/controllers/MaterialImplementacao.java" beforeDir="false" afterPath="$PROJECT_DIR$/Atividade_Prog_Desktop/src/main/java/com/unigran/br/projetop2/controllers/MaterialImplementacao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Atividade_Prog_Desktop/src/main/java/com/unigran/br/projetop2/controllers/PacienteImplementacao.java" beforeDir="false" afterPath="$PROJECT_DIR$/Atividade_Prog_Desktop/src/main/java/com/unigran/br/projetop2/controllers/PacienteImplementacao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Atividade_Prog_Desktop/src/main/java/com/unigran/br/projetop2/views/TelaLogin.form" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Atividade_Prog_Desktop/src/main/java/com/unigran/br/projetop2/views/TelaLogin.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Atividade_Prog_Desktop/src/main/java/com/unigran/br/projetop2/views/TelasAdm/TelaAdministrador.form" beforeDir="false" afterPath="$PROJECT_DIR$/Atividade_Prog_Desktop/src/main/java/com/unigran/br/projetop2/views/TelasAdm/TelaAdministrador.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Atividade_Prog_Desktop/src/main/java/com/unigran/br/projetop2/views/TelasAdm/TelaAdministrador.java" beforeDir="false" afterPath="$PROJECT_DIR$/Atividade_Prog_Desktop/src/main/java/com/unigran/br/projetop2/views/TelasAdm/TelaAdministrador.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Atividade_Prog_Desktop/src/main/java/com/unigran/br/projetop2/views/TelasAdm/TelaCadastroFunc.form" beforeDir="false" afterPath="$PROJECT_DIR$/Atividade_Prog_Desktop/src/main/java/com/unigran/br/projetop2/views/TelasAdm/TelaCadastroFunc.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Atividade_Prog_Desktop/src/main/java/com/unigran/br/projetop2/views/TelasAdm/TelaCadastroFunc.java" beforeDir="false" afterPath="$PROJECT_DIR$/Atividade_Prog_Desktop/src/main/java/com/unigran/br/projetop2/views/TelasAdm/TelaCadastroFunc.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,7 +44,7 @@
     </option>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="Adapatação-e-Novas-Classes-João-Pedro-Marques" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -70,23 +77,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;UI_DESIGNER_EDITOR_MODE.PaletteManager.WIDTH&quot;: &quot;523&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Eduardo/Desktop/Faculdade/5° Semestre/André/Trabalho P2/Projeto-P2---Clinica-Odontol-gica&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.importing&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "UI_DESIGNER_EDITOR_MODE.PaletteManager.WIDTH": "523",
+    "git-widget-placeholder": "Novas-Telas-João-Pedro-Marques-v0.9",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "C:/Users/Pedro/Desktop/Projeto-P2-ClinicaOdontologica/Atividade_Prog_Desktop/src/main/java/com/unigran/br/projetop2/views",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "reference.settings.project.maven.importing"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Pedro\Desktop\Projeto-P2-ClinicaOdontologica\Atividade_Prog_Desktop\src\main\java\com\unigran\br\projetop2\views" />
       <recent name="C:\Users\Pedro\Desktop\Projeto-P2---Clinica-Odontol-gica\Atividade_Prog_Desktop\src\main\java\com\unigran\br\projetop2" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
@@ -173,7 +181,15 @@
       <option name="project" value="LOCAL" />
       <updated>1717886473672</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Aprimoramento das associações entre as entidades presentes no projeto. Correções e novas adaptações no projeto.&#10;&#10;Desenvolvimento baseado no Diagrama de Classe fornecido.&#10;&#10;Made by Joao Pedro Marques Martins">
+      <option name="closed" value="true" />
+      <created>1718422129479</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1718422129479</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -196,7 +212,8 @@
     <MESSAGE value="Mais Lógicas Complexos - Branch Alpha 0.7.5&#10;&#10;Desenvolvimento profundo da lógica complexa, e criação de funcionalidades.&#10;&#10;Mais mudanças no comportamento de classes.&#10;&#10;By João Pedro Marques Martins&#10;&#10;(Telas só serão implementadas após o término do desenvolvimento da lógica complexa)" />
     <MESSAGE value="Lógicas e Organização - Branch Alpha 0.7.6&#10;&#10;Desenvolvimento de Algumas lógicas complexas a mais. Inicio de testes de listagem. Ultima etapa antes do desenvolvimento das telas.&#10;&#10;Mais mudanças no comportamento de classes.&#10;&#10;By João Pedro Marques Martins&#10;&#10;(Telas só serão implementadas após o término do desenvolvimento da lógica complexa)" />
     <MESSAGE value="Criação e aprimoramento das associações entre as entidades presentes no projeto.&#10;&#10;Desenvolvimento baseado no Diagrama de Classe fornecido.&#10;&#10;Made by Eduardo Panage." />
-    <option name="LAST_COMMIT_MESSAGE" value="Criação e aprimoramento das associações entre as entidades presentes no projeto.&#10;&#10;Desenvolvimento baseado no Diagrama de Classe fornecido.&#10;&#10;Made by Eduardo Panage." />
+    <MESSAGE value="Aprimoramento das associações entre as entidades presentes no projeto. Correções e novas adaptações no projeto.&#10;&#10;Desenvolvimento baseado no Diagrama de Classe fornecido.&#10;&#10;Made by Joao Pedro Marques Martins" />
+    <option name="LAST_COMMIT_MESSAGE" value="Aprimoramento das associações entre as entidades presentes no projeto. Correções e novas adaptações no projeto.&#10;&#10;Desenvolvimento baseado no Diagrama de Classe fornecido.&#10;&#10;Made by Joao Pedro Marques Martins" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
